@@ -1,0 +1,33 @@
+name: Deploy to Netlify
+
+# The site is static — no build step. Every push to main publishes.
+#
+# This exists because three times on 2026-09-21 finished work sat invisible:
+# the live site kept serving an older deploy while the repo had moved on, and
+# each time it looked like nothing had happened. Publishing is now automatic.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-jerbot-site
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: c2acc9fd-9bb4-4b55-a2d3-bb6ffd37ff8c
+        run: |
+          npx -y netlify-cli@latest deploy \
+            --prod \
+            --dir . \
+            --site "$NETLIFY_SITE_ID" \
+            --message "${GITHUB_SHA::8} on ${GITHUB_REF_NAME}"
