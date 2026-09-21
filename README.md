@@ -22,5 +22,5 @@ Canonical and Open Graph/Twitter text metadata uses `https://jerbot.dev`. No OG 
 
 - Rug Pulled! play CTAs link to `https://rugpulled.jerbot.dev`.
 - `hello@jerbot.dev` is the approved public contact address.
-- Media frames are intentionally empty/sized placeholders pending approved screenshots.
+- Rug Pulled! uses approved desk-trading and trader-management captures from `jerbot-site-assets/screens/`; remaining product media stays intentionally minimal until approved captures arrive.
 - No Steam or GitHub links are included because no approved URLs were supplied.
