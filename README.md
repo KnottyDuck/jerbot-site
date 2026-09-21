@@ -20,7 +20,7 @@ Canonical and Open Graph/Twitter text metadata uses `https://jerbot.dev`. No OG 
 
 ## Truthful placeholders
 
-- `play-rug-pulled.html` is an internal placeholder until a production game URL is supplied.
+- Rug Pulled! play CTAs link to `https://rugpulled.jerbot.dev`.
 - `hello@jerbot.dev` is the approved public contact address.
 - Media frames are intentionally empty/sized placeholders pending approved screenshots.
 - No Steam or GitHub links are included because no approved URLs were supplied.
