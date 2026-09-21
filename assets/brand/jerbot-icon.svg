@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-label="Jerbot">
+  <title>Jerbot</title>
+
+  <!--
+    Seven-armed spiral, derived from The Septenary Spiral cover art.
+    Geometric rather than painterly on purpose: the cover's nebula texture
+    dissolves below ~64px, while a hard silhouette survives to 16px.
+
+    Arms are deliberately chunky — a delicate version read as wisps and
+    disappeared at favicon size. Each arm's hub end sits inside the core
+    glow, so the join is covered rather than needing to be perfect.
+    Seven arms at 360/7 = 51.4286 degrees. Tips stop at r≈37 to stay clear
+    of the rounded corners.
+  -->
+
+  <defs>
+    <radialGradient id="core" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fffdf6"/>
+      <stop offset="40%"  stop-color="#f0e7d0" stop-opacity=".9"/>
+      <stop offset="100%" stop-color="#cbd8e6" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="arm" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#fbf7ec"/>
+      <stop offset="55%"  stop-color="#ece4d1"/>
+      <stop offset="100%" stop-color="#b9c8d8"/>
+    </linearGradient>
+
+    <path id="a" d="M50 41 C64 37 79 44 87 59 C76 53 60 53 45 55 Z"/>
+  </defs>
+
+  <rect width="100" height="100" rx="22" fill="#0b0c0e"/>
+
+  <g fill="url(#arm)">
+    <use href="#a"/>
+    <use href="#a" transform="rotate(51.4286 50 50)"/>
+    <use href="#a" transform="rotate(102.857 50 50)"/>
+    <use href="#a" transform="rotate(154.286 50 50)"/>
+    <use href="#a" transform="rotate(205.714 50 50)"/>
+    <use href="#a" transform="rotate(257.143 50 50)"/>
+    <use href="#a" transform="rotate(308.571 50 50)"/>
+  </g>
+
+  <circle cx="50" cy="50" r="14" fill="url(#core)"/>
+  <circle cx="50" cy="50" r="4.4" fill="#fffdf6"/>
+</svg>

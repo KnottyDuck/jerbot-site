@@ -10,6 +10,7 @@ Open `index.html` in a browser. No build step, server, third-party dependency, a
 
 - `index.html` — landing, product portfolio, services offer, and dual-intent contact.
 - `services.html` — concise software-services page; no invented pricing, team, client, or delivery claims.
+- `about.html` — veteran-made/enterprise background, sourced credentials, career arc, and reserved Texas Veterans Commission mark slot.
 - Product pages — Rug Pulled!, Rug Pulled! Live, and PubMint status/detail pages.
 
 ## Metadata and assets
