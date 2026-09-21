@@ -1,1 +1,4 @@
 .DS_Store
+
+# Netlify CLI local state
+.netlify/
