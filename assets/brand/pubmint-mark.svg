@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg role="img" aria-labelledby="title desc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <title id="title">PubMint mark, Jerbot palette option</title>
+  <desc id="desc">Ink hexagon with cream border and lime Jerbot spiral.</desc>
+  <path d="M256 16 480 145v254L256 496 32 399V145Z" fill="#0b0c0e" stroke="#fbf7ec" stroke-width="18" stroke-linejoin="round"/>
+  <g transform="translate(128 128) scale(2.56)">
+    <defs><path id="blade" d="M48.1 41.7C53.9 33.1 66.6 24.4 84.8 22.7 76.7 31.3 67.1 38.4 56.1 47.8c-3 2.6-6.9.5-8-6.1Z"/></defs>
+    <g fill="#fbf7ec"><use href="#blade"/><use href="#blade" transform="rotate(51.4286 50 50)"/><use href="#blade" transform="rotate(102.8571 50 50)"/><use href="#blade" transform="rotate(154.2857 50 50)"/><use href="#blade" transform="rotate(205.7143 50 50)"/><use href="#blade" transform="rotate(257.1429 50 50)"/><use href="#blade" transform="rotate(308.5714 50 50)"/></g>
+    <circle cx="50" cy="50" r="7.2" fill="#c8f751"/><circle cx="50" cy="50" r="3.5" fill="#0b0c0e"/>
+  </g>
+</svg>
