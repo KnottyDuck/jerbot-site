@@ -38,6 +38,11 @@ body {
    the h1 so the hierarchy reads product first, sections second. */
 .statement h2.fine-print-title,.statement h2#feedback-title{font-size:clamp(1.25rem,3vw,1.55rem);line-height:1.2;letter-spacing:.01em;margin:2.4rem 0 .6rem}
 
+/* Product story captures keep their 16:10 game viewport and open at full size. */
+.rug-copy .media-screenshot { height:auto; aspect-ratio:8/5; padding:0; margin:1.5rem 0 2.5rem; }
+.rug-copy .media-screenshot a { display:block; width:100%; height:100%; }
+.rug-copy .media-screenshot img { height:100%; }
+
 /* Scheme and component colours. */
 :root {
   color-scheme: dark;
