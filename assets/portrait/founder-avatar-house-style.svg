@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg role="img" aria-label="Jerry, founder avatar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+  <title>Jerry, founder avatar</title>
+  <defs>
+    <pattern id="panel-grid" width="18" height="18" patternUnits="userSpaceOnUse">
+      <path d="M18 0H0V18" fill="none" stroke="#274554" stroke-width="1" opacity=".7"/>
+      <circle cx="9" cy="9" r="1" fill="#5dd6b0" opacity=".4"/>
+    </pattern>
+  </defs>
+
+  <rect width="120" height="120" fill="#142632"/>
+  <rect x="7" y="7" width="106" height="106" rx="8" fill="url(#panel-grid)" stroke="#274554" stroke-width="2"/>
+
+  <!-- shoulders and shirt -->
+  <path d="M8 121l4-17q3-17 27-22l21 10 21-10q24 5 27 22l4 17Z" fill="#18202a" stroke="#0d1721" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M39 85l21 11 21-11 9 36H30Z" fill="#f4eedc" stroke="#0d1721" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M39 85l21 11-10 10-16-13Zm42 0L60 96l10 10 16-13Z" fill="#eac16b" stroke="#0d1721" stroke-width="1.8" stroke-linejoin="round"/>
+  <path d="M56 98h8l-2 7 4 16H53l4-16Z" fill="#0d1721"/>
+
+  <!-- neck and ears -->
+  <path d="M48 77h24l2 19-14 10-14-10Z" fill="#8e5b46" stroke="#0d1721" stroke-width="2.2"/>
+  <path d="M34 48q-9-5-9 6t10 11m50-17q9-5 9 6t-10 11" fill="#8e5b46" stroke="#0d1721" stroke-width="2.2"/>
+  <path d="M29 53q4-4 8 1m54-1q-4-4-8 1" fill="none" stroke="#e7ad82" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- face, shaved head -->
+  <path d="M33 43q0-27 27-27t27 27l-2 24q-3 16-25 21-22-5-25-21Z" fill="#8e5b46" stroke="#0d1721" stroke-width="2.7" stroke-linejoin="round"/>
+  <path d="M34 43q0-28 26-28t26 28l-5-5q-4-11-12-14-9 4-18 4-9 0-14-4-3 5-3 14Z" fill="#2b1d18" stroke="#0d1721" stroke-width="2.2" stroke-linejoin="round"/>
+  <path d="M38 29q10-8 22-8 13 0 22 9" fill="none" stroke="#f4eedc" stroke-width="1.2" opacity=".22" stroke-linecap="round"/>
+
+  <!-- beard and moustache -->
+  <path d="M35 65q4 17 25 23 21-6 25-23l-4 2q-4 11-21 14-17-3-21-14Z" fill="#2b1d18" stroke="#0d1721" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M47 68q6 4 13 0 7 4 13 0-3 9-13 9t-13-9Z" fill="#2b1d18"/>
+  <path d="M52 76q8 5 16 0" fill="none" stroke="#e7ad82" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- rimless glasses -->
+  <path d="M36 49q7-5 18 0v8q-8 6-17 0Zm30 0q11-5 18 0l-1 8q-9 6-17 0Z" fill="#f4eedc" fill-opacity=".12" stroke="#0d1721" stroke-width="1.7"/>
+  <path d="M54 51h12M36 51l-5-2m53 2 5-2" fill="none" stroke="#0d1721" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M46 49q4-2 8 0m18 0q4-2 8 0" fill="none" stroke="#f4eedc" stroke-width="1" opacity=".8"/>
+
+  <!-- warm eyes and expressive brows -->
+  <path d="M40 45q7-5 14-1m12 0q7-4 14 1" fill="none" stroke="#2b1d18" stroke-width="2.8" stroke-linecap="round"/>
+  <path d="M42 53q5-4 10 0-5 5-10 0Zm26 0q5-4 10 0-5 5-10 0Z" fill="#f4eedc" stroke="#0d1721" stroke-width="1.1"/>
+  <circle cx="48" cy="53" r="2" fill="#0d1721"/><circle cx="72" cy="53" r="2" fill="#0d1721"/>
+  <path d="M60 54l-4 10 7 1" fill="none" stroke="#0d1721" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- open, amused smile -->
+  <path d="M47 70q13-10 26 0-2 11-13 11T47 70Z" fill="#0d1721" stroke="#0d1721" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M51 71q9-5 18 0-4 4-9 4t-9-4Z" fill="#f4eedc"/>
+  <path d="M53 79q7 3 14 0" fill="none" stroke="#e7ad82" stroke-width="1.4" stroke-linecap="round"/>
+</svg>
