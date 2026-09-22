@@ -42,7 +42,10 @@ body {
 :root {
   color-scheme: dark;
   --texture-image: none;
-  --texture-trace: #0f1512;
+  /* Candidate C, chosen by Jerry 2026-09-22. 3.66:1 against --ink: the circuit
+     reads as a board rather than a rumour, matching the light scheme's presence.
+     Only the margins show it — prose sits on solid panels. */
+  --texture-trace: #507263;
   --button-hover: #7fb829;
   --media-base: var(--panel);
   --media-accent: var(--ink);
