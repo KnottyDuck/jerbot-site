@@ -1,0 +1,70 @@
+name: Deploy
+
+# jerbot.dev is static HTML — there is nothing to compile. This workflow
+# publishes it through the Netlify CLI from GitHub Actions instead of using
+# Netlify's own git build.
+#
+# Why: Netlify's free plan meters BUILD MINUTES, and a build ran on every push
+# even though this site has no build step. On 2026-09-22 that ceiling was hit
+# and publishing stopped while the live site kept serving fine. Actions minutes
+# are a separate, far larger allowance, so deploys stop competing for it.
+#
+# Requires:
+#   secret NETLIFY_AUTH_TOKEN  — a Netlify personal access token
+#   variable NETLIFY_SITE_ID   — the jerbot.dev site's API ID (not secret)
+#
+# IMPORTANT: Netlify's own continuous deployment must be turned off for this
+# site, or both paths publish on every push and the build minutes are spent
+# anyway — which is the whole problem this avoids.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Publish only the site itself. Deploying the repo root would ship
+      # .github/ and README.md to a public web server.
+      - name: Stage publish directory
+        run: |
+          mkdir _site
+          rsync -a ./ _site/ \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '.netlify' \
+            --exclude '_site' \
+            --exclude 'README.md' \
+            --exclude '.DS_Store'
+          echo "Publishing $(find _site -type f | wc -l) files"
+
+      # Fail loudly rather than deploying an empty directory over a live site.
+      - name: Sanity-check the publish directory
+        run: |
+          test -f _site/index.html || { echo "::error::index.html missing"; exit 1; }
+          test -f _site/styles.css || { echo "::error::styles.css missing"; exit 1; }
+
+      # --no-build is load-bearing. The Netlify site has a build command in its
+      # UI; without this flag the CLI runs it and publishes its output instead
+      # of what we just staged. That exact trap shipped a broken bundle on the
+      # rug-pulled site on 2026-09-22.
+      - name: Deploy to Netlify
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+        run: |
+          test -n "$NETLIFY_SITE_ID" || { echo "::error::NETLIFY_SITE_ID variable is not set"; exit 1; }
+          npx -y netlify-cli@latest deploy \
+            --prod \
+            --no-build \
+            --dir _site \
+            --site "$NETLIFY_SITE_ID" \
+            --message "${GITHUB_SHA::8} on ${GITHUB_REF_NAME}"
