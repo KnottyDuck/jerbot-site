@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" role="img" aria-labelledby="title desc">
+  <title id="title">Jerbot seven-arm mark</title>
+  <desc id="desc">A seven-arm galactic seal with a lime eye.</desc>
+
+  <style>
+    :root { color: #0b0c0e; }
+    .blade { fill: currentColor; }
+    .eye-ring { fill: #c8f751; }
+    .eye { fill: #0b0c0e; }
+  </style>
+
+  <!--
+    The seven blades intentionally stop short of the hub. The open eye keeps
+    the prime-counted spiral legible at favicon size instead of collapsing
+    into a pinwheel. A solid silhouette survives where painterly detail does not.
+  -->
+  <defs>
+    <path id="blade" class="blade" d="M48.1 41.7 C53.9 33.1 66.6 24.4 84.8 22.7 C76.7 31.3 67.1 38.4 56.1 47.8 C53.1 50.4 49.2 48.3 48.1 41.7 Z"/>
+  </defs>
+
+  <g>
+    <use href="#blade"/>
+    <use href="#blade" transform="rotate(51.4286 50 50)"/>
+    <use href="#blade" transform="rotate(102.8571 50 50)"/>
+    <use href="#blade" transform="rotate(154.2857 50 50)"/>
+    <use href="#blade" transform="rotate(205.7143 50 50)"/>
+    <use href="#blade" transform="rotate(257.1429 50 50)"/>
+    <use href="#blade" transform="rotate(308.5714 50 50)"/>
+  </g>
+
+  <circle class="eye-ring" cx="50" cy="50" r="6.2"/>
+  <circle class="eye" cx="50" cy="50" r="3.1"/>
+</svg>

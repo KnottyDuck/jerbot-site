@@ -25,3 +25,9 @@ Canonical and Open Graph/Twitter text metadata uses `https://jerbot.dev`. No OG 
 - `hello@jerbot.dev` is the approved public contact address.
 - Rug Pulled! uses approved desk-trading and trader-management captures from `jerbot-site-assets/screens/`; remaining product media stays intentionally minimal until approved captures arrive.
 - No Steam or GitHub links are included because no approved URLs were supplied.
+
+## Open inputs
+
+- The About page has a sized founder-photo slot pending Jerry’s approved vectorized portrait. No avatar is used as a stand-in.
+- Vision copy awaits Jerry’s own wording; no guessed mission statement has been added.
+- A favicon and approved 1200 × 630 Open Graph image are still needed.
