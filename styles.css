@@ -123,3 +123,6 @@ footer a { color: var(--paper); }
 
 /* Vision section closing line — it lands on its own, so give it room. */
 .vision-close{margin-top:1.4rem}
+
+/* Product-page changelog groups sit under the section heading, not beside it. */
+.statement h3.changelog-group{font-size:.95rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:1.6rem 0 .5rem}
