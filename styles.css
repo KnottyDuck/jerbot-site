@@ -120,3 +120,6 @@ footer a { color: var(--paper); }
 /* PubMint product frame: the mark stands in until there is product art. */
 .media-frame.pubmint-markframe{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1rem}
 .pubmint-markframe img{width:clamp(96px,22vw,160px);height:auto}
+
+/* Vision section closing line — it lands on its own, so give it room. */
+.vision-close{margin-top:1.4rem}

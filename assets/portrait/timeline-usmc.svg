@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg role="img" aria-label="Jerry, United States Marine Corps 2008 to 2013" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="512" height="512">
+  <title>Jerry, United States Marine Corps 2008 to 2013</title>
+  <defs>
+    <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#28627c" opacity=".8"/><circle cx="9" cy="9" r="1" fill="#75d9b6" opacity=".6"/></pattern>
+    <pattern id="marpat" width="12" height="12" patternUnits="userSpaceOnUse" shape-rendering="crispEdges">
+      <rect width="12" height="12" fill="#46533b"/>
+      <path d="M1 1h3v3H1zm7 0h3v2H8zM5 5h3v3H5zm-4 5h3v2H1zm8-2h3v3H9z" fill="#b2a17b"/>
+      <path d="M5 1h2v2H5zM1 6h2v2H1zm7 2h2v2H8zM5 10h3v2H5z" fill="#6c5543"/>
+      <path d="M4 4h1v2H4zm6 1h2v2h-2zM3 9h2v1H3z" fill="#202923"/>
+    </pattern>
+    <clipPath id="shoulders"><path d="M8 105Q15 88 39 82L60 96 81 82Q105 88 112 105v1H8Z"/></clipPath>
+  </defs>
+  <rect width="120" height="120" fill="#14384b"/><rect x="7" y="7" width="106" height="106" rx="8" fill="url(#grid)" stroke="#4b8da3" stroke-width="2"/>
+  <path d="M8 121l4-17q3-17 27-22l21 10 21-10q24 5 27 22l4 17Z" fill="#46533b" stroke="#0d1721" stroke-width="3"/>
+  <path d="M39 85l21 11 21-11 9 36H30Z" fill="#46533b" stroke="#0d1721" stroke-width="2"/>
+  <path d="M8 105Q15 88 39 82L60 96 81 82Q105 88 112 105v1H8Z" fill="url(#marpat)" clip-path="url(#shoulders)"/>
+  <path d="M39 85l21 11-10 10-16-13Zm42 0L60 96l10 10 16-13Z" fill="url(#marpat)" stroke="#0d1721" stroke-width="1.8"/>
+  <path d="M48 77h24l2 19-14 10-14-10Z" fill="#8e5b46" stroke="#0d1721" stroke-width="2.2"/>
+  <path d="M34 49q-9-5-9 6t10 11m50-17q9-5 9 6t-10 11" fill="#8e5b46" stroke="#0d1721" stroke-width="2.2"/>
+  <path d="M33 43q0-25 27-25t27 25l-2 24q-3 16-25 21-22-5-25-21Z" fill="#8e5b46" stroke="#0d1721" stroke-width="2.7"/>
+  <path d="M41 33V28q2-10 8-11h22q6 1 8 11v5q-19-4-38 0Z" fill="#2b1d18" stroke="#0d1721" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M36 31h48" stroke="#f4eedc" stroke-width="1.2" opacity=".22"/>
+  <path d="M40 45q7-5 14-1m12 0q7-4 14 1" fill="none" stroke="#2b1d18" stroke-width="2.8" stroke-linecap="round"/><path d="M42 53q5-4 10 0-5 5-10 0Zm26 0q5-4 10 0-5 5-10 0Z" fill="#f4eedc" stroke="#0d1721" stroke-width="1.1"/><circle cx="48" cy="53" r="2" fill="#0d1721"/><circle cx="72" cy="53" r="2" fill="#0d1721"/>
+  <path d="M60 54l-4 10 7 1" fill="none" stroke="#0d1721" stroke-width="1.8" stroke-linecap="round"/><path d="M53 72q7 4 14 0" fill="none" stroke="#3b241f" stroke-width="1.8" stroke-linecap="round"/><path d="M56 76q4 2 8 0" fill="none" stroke="#e7ad82" stroke-width="1.2" stroke-linecap="round"/>
+</svg>
