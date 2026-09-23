@@ -4,7 +4,11 @@ name: Deploy
 # publishes it through the Netlify CLI from GitHub Actions instead of using
 # Netlify's own git build.
 #
-# Why: Netlify's free plan meters BUILD MINUTES, and a build ran on every push
+# Why: this site moved off Netlify on 2026-09-23. Netlify's free tier is 300
+# credits/month and a production deploy costs 15 -- 20 deploys, shared with
+# bandwidth and requests. Cloudflare Pages: 500 builds/month, and requests to
+# static assets are free and unlimited. Originally written because Netlify
+# metered BUILD MINUTES, and a build ran on every push
 # even though this site has no build step. On 2026-09-22 that ceiling was hit
 # and publishing stopped while the live site kept serving fine. Actions minutes
 # are a separate, far larger allowance, so deploys stop competing for it.
@@ -57,15 +61,19 @@ jobs:
       # UI; without this flag the CLI runs it and publishes its output instead
       # of what we just staged. That exact trap shipped a broken bundle on the
       # rug-pulled site on 2026-09-22.
-      - name: Deploy to Netlify
+      # wrangler does not build. The Netlify CLI did, unless told not to, and
+      # silently published its own build instead of the directory it was given
+      # -- that shipped a gate-less bundle on 2026-09-22 while CI reported
+      # success. That failure mode does not exist here, so there is no flag to
+      # remember.
+      - name: Deploy to Cloudflare Pages
         env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ vars.NETLIFY_SITE_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          test -n "$NETLIFY_SITE_ID" || { echo "::error::NETLIFY_SITE_ID variable is not set"; exit 1; }
-          npx -y netlify-cli@latest deploy \
-            --prod \
-            --no-build \
-            --dir _site \
-            --site "$NETLIFY_SITE_ID" \
-            --message "${GITHUB_SHA::8} on ${GITHUB_REF_NAME}"
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo "::error::CLOUDFLARE_ACCOUNT_ID variable is not set"; exit 1; }
+          npx -y wrangler@4 pages deploy _site \
+            --project-name jerbot-site \
+            --branch "$GITHUB_REF_NAME" \
+            --commit-hash "$GITHUB_SHA" \
+            --commit-dirty=true
