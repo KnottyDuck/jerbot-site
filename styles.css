@@ -135,3 +135,8 @@ footer a { color: var(--paper); }
    The small side margins pull the adjacent letters to the optical spacing of
    the rest of the word — a round glyph needs less room than a square one.
    It scales with the type, so no separate mobile size is needed. */
+
+/* Licences page: dense list, each entry a package and its copyright line. */
+.licence-list{list-style:none;padding:0;margin:1rem 0 0}
+.licence-list li{border-top:1px solid var(--line);padding:.7rem 0}
+.licence-list .muted-line{color:var(--muted);font-size:.87rem}
