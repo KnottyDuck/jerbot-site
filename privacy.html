@@ -28,14 +28,14 @@
 don't sell anything about you to anyone. This page says exactly what I hold and
 how to get rid of it.</p>
 
-<p class="card-meta">Last updated 23 September 2026</p>
+<p class="card-meta">Last updated 26 September 2026</p>
 
 <h2>The short version</h2>
 
 <p>Rug Pulled! is in closed beta, so playing it means signing in with a free
 account. By default I hold <strong>your email address</strong> and <strong>a
 record of when you played</strong>. Nothing else, unless you choose one of the
-two things below.</p>
+three things below.</p>
 
 <p><strong>Your game saves never reach me on their own.</strong> Careers live in
 your own browser's storage on your own device. Signing in unlocks the game; it
@@ -47,14 +47,16 @@ copy.</p>
 
 <ul>
   <li><strong>Your email address.</strong> Used to send you a sign-in link. I
-      don't use passwords, so this is how signing in works at all.</li>
+      don't use passwords, so this is how signing in works at all. I can also
+      see which email addresses have signed up, so I know who is testing and can
+      follow up on feedback.</li>
   <li><strong>Play sessions.</strong> When you opened the game, which build you
       ran, and a coarse note of your platform — something like
       <code>macos/chrome</code>. Not a device identifier, not a full browser
       fingerprint.</li>
 </ul>
 
-<h2>Two things, only if you choose them</h2>
+<h2>Three things, only if you choose them</h2>
 
 <ul>
   <li><strong>Newsletter updates.</strong> There is an unticked box when you sign
@@ -67,6 +69,25 @@ copy.</p>
       attach your roster — careers, traders, Ka$h and items — so I can see
       what actually happened in your game. <strong>That attachment is a checkbox
       you can untick</strong>, and sending feedback without it works fine.</li>
+  <li><strong>Your device details.</strong> The first time you sign in on a
+      phone or computer, the game asks whether you'll share what you're playing
+      on, so I can reproduce bugs on the same kind of device. If you share, I
+      keep the model you pick (browsers can't tell iPhones apart, so you
+      confirm it), your operating system and browser and their versions,
+      whether it's a phone, tablet or computer, your screen size, whether you're
+      in a browser tab or a Home Screen app, and your browser's own
+      description of itself (its "user agent"). Feedback you send from that
+      device then includes the same details as they were at that moment.
+      <strong>It's optional, and skipping doesn't affect your access or your
+      feedback</strong> &mdash; but only testers who share are considered for
+      the tester reward (a free key for the paid release). If you skip, I keep
+      only that you skipped, when, and a random ID the game made for that
+      browser &mdash; no details. The random ID is not a fingerprint and isn't
+      used to track you anywhere else. Device details never include your IP
+      address, your location, or any advertising or hardware identifier. You
+      can share later, or withdraw, in the game: Settings &rarr; Device info.
+      Withdrawing deletes the details, including the ones attached to earlier
+      feedback from that device.</li>
 </ul>
 
 <p>Feedback goes to me privately. It is never published, never posted anywhere,
@@ -99,9 +120,9 @@ there.</p>
 <h2>Who else touches it</h2>
 
 <ul>
-  <li><strong>Supabase</strong> — stores the account and the play-session
-      records.</li>
-  <li><strong>Netlify</strong> — serves these pages and the game, and keeps
+  <li><strong>Supabase</strong> — stores the account, the play-session
+      records, feedback, and device details if you share them.</li>
+  <li><strong>Cloudflare</strong> — serves these pages and the game, and keeps
       standard server logs as any web host does.</li>
 </ul>
 
@@ -112,7 +133,8 @@ I don't sell or share it.</p>
 
 <p>For as long as the beta runs, or until you ask me to delete it. When the beta
 ends I'll delete the play-session records unless you've carried the account
-forward to a released version.</p>
+forward to a released version. Device details are deleted as soon as you
+withdraw them, or with your account.</p>
 
 <h2>Your rights</h2>
 
@@ -122,7 +144,8 @@ and it can't be undone. The game offers to download your careers first &mdash;
 take the download if you want to keep them.</p>
 
 <p>Deleting removes your email address, every play-session record tied to it,
-and any feedback you sent me &mdash; including a roster you attached to it.</p>
+your device details, and any feedback you sent me &mdash; including a roster
+you attached to it.</p>
 
 <p>Your game saves aren't affected. They're on your device, not mine, and
 clearing your browser data removes them. The only copy I could ever have &mdash;
