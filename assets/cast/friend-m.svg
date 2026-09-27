@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  
+  <!-- Live male friend v2: head-and-shoulders framing (NOT a monitor bust), tone 01, fuller warm-brown swept hair, LIVE badge -->
+  <!-- Hair: full, warm brown, swept —  wider than before, not inside a monitor -->
+  <ellipse cx="60" cy="24" rx="22" ry="14" fill="#6b3a10" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- swept fringe sweep left-to-right -->
+  <path d="M38 22 Q50 14 72 20 Q80 24 76 28" fill="#6b3a10" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- Head -->
+  <ellipse cx="60" cy="40" rx="18" ry="19" fill="#e8c89a" stroke="#0d1721" stroke-width="2"/>
+  <!-- Eyes -->
+  <ellipse cx="52" cy="40" rx="4" ry="4.5" fill="#0d1721"/>
+  <ellipse cx="68" cy="40" rx="4" ry="4.5" fill="#0d1721"/>
+  <ellipse cx="51" cy="38.5" rx="1.5" ry="1.5" fill="white" opacity="0.85"/>
+  <ellipse cx="67" cy="38.5" rx="1.5" ry="1.5" fill="white" opacity="0.85"/>
+  <!-- Brows -->
+  <path d="M48 34 Q52 32 56 34" fill="none" stroke="#5a3010" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M64 34 Q68 32 72 34" fill="none" stroke="#5a3010" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Smile -->
+  <path d="M52 50 Q60 56 68 50" fill="none" stroke="#0d1721" stroke-width="1.8" stroke-linecap="round"/>
+  <!-- Neck -->
+  <rect x="54" y="57" width="12" height="8" rx="2" fill="#e8c89a" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- Shoulders: olive hoodie, head-and-shoulders crop -->
+  <path d="M16 120 Q20 65 44 65 L54 65 L54 120 Z" fill="#6b7c3a" stroke="#0d1721" stroke-width="2"/>
+  <path d="M104 120 Q100 65 76 65 L66 65 L66 120 Z" fill="#6b7c3a" stroke="#0d1721" stroke-width="2"/>
+  <rect x="44" y="65" width="32" height="55" rx="2" fill="#6b7c3a" stroke="#0d1721" stroke-width="2"/>
+  <!-- hoodie pocket -->
+  <rect x="50" y="88" width="20" height="14" rx="3" fill="none" stroke="#4a5a2a" stroke-width="1.5"/>
+  <!-- LIVE badge -->
+  <rect x="70" y="70" width="22" height="10" rx="3" fill="#4ade80"/>
+  <text x="81" y="79" font-family="monospace" font-size="7" font-weight="bold" fill="#0d1721" text-anchor="middle">LIVE</text>
+</svg>

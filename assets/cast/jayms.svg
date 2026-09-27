@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  
+  <!-- Jayms: Black woman, warm cartoon, house style, tone 5/6, defined twist-out hair, friendly big glossy eyes, warm smile, casual outfit -->
+  <!-- Head -->
+  <ellipse cx="60" cy="38" rx="16" ry="17" fill="#4a2010" stroke="#0d1721" stroke-width="2"/>
+  <!-- Twist-out / puff hair: large rounded silhouette with texture suggestion -->
+  <ellipse cx="60" cy="26" rx="20" ry="14" fill="#1a0a04" stroke="#0d1721" stroke-width="1.5"/>
+  <ellipse cx="44" cy="30" rx="8" ry="10" fill="#1a0a04" stroke="#0d1721" stroke-width="1.5"/>
+  <ellipse cx="76" cy="30" rx="8" ry="10" fill="#1a0a04" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- twist texture lines -->
+  <path d="M50 22 Q52 18 55 22" fill="none" stroke="#2d1208" stroke-width="1"/>
+  <path d="M58 20 Q61 16 64 20" fill="none" stroke="#2d1208" stroke-width="1"/>
+  <path d="M66 22 Q69 18 72 22" fill="none" stroke="#2d1208" stroke-width="1"/>
+  <!-- Neck -->
+  <rect x="55" y="53" width="10" height="8" rx="2" fill="#4a2010" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- Eyes: large glossy cartoon eyes -->
+  <ellipse cx="53" cy="38" rx="5.5" ry="6" fill="#0d1721"/>
+  <ellipse cx="67" cy="38" rx="5.5" ry="6" fill="#0d1721"/>
+  <ellipse cx="53" cy="38" rx="3.5" ry="4" fill="#3a1a06"/>
+  <ellipse cx="67" cy="38" rx="3.5" ry="4" fill="#3a1a06"/>
+  <!-- glossy highlights -->
+  <ellipse cx="51.5" cy="36" rx="1.5" ry="1.5" fill="white" opacity="0.9"/>
+  <ellipse cx="65.5" cy="36" rx="1.5" ry="1.5" fill="white" opacity="0.9"/>
+  <!-- Warm smile -->
+  <path d="M52 47 Q60 53 68 47" fill="none" stroke="#0d1721" stroke-width="2" stroke-linecap="round"/>
+  <!-- Casual outfit: warm mustard-yellow top -->
+  <path d="M40 61 Q44 57 55 61 L55 90 L40 90 Z" fill="#c9952a" stroke="#0d1721" stroke-width="2"/>
+  <path d="M80 61 Q76 57 65 61 L65 90 L80 90 Z" fill="#c9952a" stroke="#0d1721" stroke-width="2"/>
+  <rect x="44" y="61" width="32" height="29" rx="2" fill="#c9952a" stroke="#0d1721" stroke-width="2"/>
+  <!-- Arms -->
+  <path d="M40 63 Q28 68 26 78" fill="none" stroke="#4a2010" stroke-width="6" stroke-linecap="round"/>
+  <path d="M80 63 Q92 68 94 78" fill="none" stroke="#4a2010" stroke-width="6" stroke-linecap="round"/>
+  <!-- Hands -->
+  <circle cx="26" cy="80" r="4" fill="#4a2010" stroke="#0d1721" stroke-width="1.5"/>
+  <circle cx="94" cy="80" r="4" fill="#4a2010" stroke="#0d1721" stroke-width="1.5"/>
+</svg>

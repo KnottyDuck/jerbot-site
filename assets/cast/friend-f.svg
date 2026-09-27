@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Background -->
+  
+
+  <!-- Monitor frame (house-style) -->
+  <rect x="10" y="72" width="100" height="38" rx="3"
+        fill="#0d1721" stroke="#86baf5" stroke-width="2"/>
+  <!-- Monitor stand -->
+  <rect x="52" y="110" width="16" height="6" rx="2" fill="#86baf5" opacity="0.4"/>
+  <rect x="44" y="115" width="32" height="3" rx="1.5" fill="#86baf5" opacity="0.3"/>
+
+  <!-- Torso / outfit: navy structured blazer -->
+  <path d="M36,72 C36,59 44,54 60,54 C76,54 84,59 84,72 Z"
+        fill="#1e2d5a" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- Blazer lapels -->
+  <path d="M60,54 L55,62 L48,62" stroke="#0d1721" stroke-width="1" fill="none"/>
+  <path d="M60,54 L65,62 L72,62" stroke="#0d1721" stroke-width="1" fill="none"/>
+  <!-- Blue blouse centre -->
+  <path d="M55,62 L60,72 L65,62 Z" fill="#86baf5" opacity="0.7"/>
+
+  <!-- LIVE badge on chest -->
+  <rect x="53" y="63" width="14" height="7" rx="3.5" fill="#4ade80"/>
+  <text x="60" y="68.5" font-family="monospace" font-size="4.5" font-weight="700"
+        fill="#0d1721" text-anchor="middle" letter-spacing="0.3">LIVE</text>
+
+  <!-- Neck -->
+  <rect x="55" y="49" width="10" height="8" rx="3"
+        fill="#6b3a26" stroke="#0d1721" stroke-width="1"/>
+
+  <!-- Head -->
+  <ellipse cx="60" cy="36" rx="17" ry="19"
+           fill="#6b3a26" stroke="#0d1721" stroke-width="2"/>
+
+  <!-- Hair: voluminous coily dark-brown puff -->
+  <!-- Main puff silhouette -->
+  <ellipse cx="60" cy="26" rx="24" ry="18" fill="#2a1a0e" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- Side puff bumps -->
+  <ellipse cx="38" cy="34" rx="8" ry="10" fill="#2a1a0e" stroke="#0d1721" stroke-width="1"/>
+  <ellipse cx="82" cy="34" rx="8" ry="10" fill="#2a1a0e" stroke="#0d1721" stroke-width="1"/>
+  <!-- Coil texture lines -->
+  <path d="M50,20 Q53,16 56,20" stroke="#4a2e18" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M60,17 Q63,13 66,17" stroke="#4a2e18" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M44,28 Q46,24 48,28" stroke="#4a2e18" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M70,22 Q73,18 76,22" stroke="#4a2e18" stroke-width="1" fill="none" opacity="0.6"/>
+
+  <!-- Eyes -->
+  <ellipse cx="53" cy="36" rx="3.5" ry="3" fill="white"/>
+  <ellipse cx="67" cy="36" rx="3.5" ry="3" fill="white"/>
+  <circle cx="54" cy="36.5" r="2" fill="#1a0a05"/>
+  <circle cx="68" cy="36.5" r="2" fill="#1a0a05"/>
+  <circle cx="53" cy="35.5" r="0.8" fill="white"/>
+  <circle cx="67" cy="35.5" r="0.8" fill="white"/>
+
+  <!-- Eyebrows -->
+  <path d="M50,31.5 Q53,30 56,31.5" stroke="#1a0a05" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+  <path d="M64,31.5 Q67,30 70,31.5" stroke="#1a0a05" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M58,40 Q60,42.5 62,40" stroke="#4a2010" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Mouth: warm smile -->
+  <path d="M55,45 Q60,49 65,45" stroke="#0d1721" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+
+  <!-- Ears -->
+  <ellipse cx="43" cy="37" rx="3" ry="4" fill="#6b3a26" stroke="#0d1721" stroke-width="1"/>
+  <ellipse cx="77" cy="37" rx="3" ry="4" fill="#6b3a26" stroke="#0d1721" stroke-width="1"/>
+
+  <!-- Gold hoop earrings -->
+  <circle cx="43" cy="40" r="3.5" fill="none" stroke="#d4a017" stroke-width="1.8"/>
+  <circle cx="77" cy="40" r="3.5" fill="none" stroke="#d4a017" stroke-width="1.8"/>
+</svg>

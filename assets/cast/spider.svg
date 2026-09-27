@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Background -->
+  
+
+  <!-- Legs (4 pairs) — drawn behind body -->
+  <!-- Front-left pair -->
+  <path d="M46,54 C36,50 26,44 18,36" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M45,58 C34,56 24,54 14,50" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Front-right pair -->
+  <path d="M74,54 C84,50 94,44 102,36" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M75,58 C86,56 96,54 106,50" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Rear-left pair -->
+  <path d="M46,68 C36,72 26,78 18,88" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M48,72 C38,80 30,86 22,96" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Rear-right pair -->
+  <path d="M74,68 C84,72 94,78 102,88" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M72,72 C82,80 90,86 98,96" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Abdomen (slightly larger oval, lower) -->
+  <ellipse cx="60" cy="78" rx="18" ry="22"
+           fill="#f4eedc" stroke="#0d1721" stroke-width="2"/>
+  <!-- Abdomen pattern lines -->
+  <path d="M54,70 Q60,67 66,70" stroke="#0d1721" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M52,77 Q60,74 68,77" stroke="#0d1721" stroke-width="1" fill="none" opacity="0.5"/>
+  <path d="M53,84 Q60,81 67,84" stroke="#0d1721" stroke-width="1" fill="none" opacity="0.5"/>
+
+  <!-- Pedicel (waist connection) -->
+  <ellipse cx="60" cy="57" rx="5" ry="4"
+           fill="#f4eedc" stroke="#0d1721" stroke-width="1.5"/>
+
+  <!-- Cephalothorax -->
+  <ellipse cx="60" cy="46" rx="17" ry="14"
+           fill="#f4eedc" stroke="#0d1721" stroke-width="2"/>
+
+  <!-- Chelicerae (two short downward strokes) -->
+  <path d="M56,58 L54,63" stroke="#0d1721" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M64,58 L66,63" stroke="#0d1721" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Eye cluster: two large forward eyes (principal) -->
+  <circle cx="55" cy="44" r="6" fill="#0d1721" stroke="#f4eedc" stroke-width="1"/>
+  <circle cx="65" cy="44" r="6" fill="#0d1721" stroke="#f4eedc" stroke-width="1"/>
+  <!-- Principal eye iris highlights -->
+  <circle cx="55" cy="44" r="3.5" fill="#86baf5"/>
+  <circle cx="65" cy="44" r="3.5" fill="#86baf5"/>
+  <!-- Pupil dots -->
+  <circle cx="55" cy="44" r="1.5" fill="#0d1721"/>
+  <circle cx="65" cy="44" r="1.5" fill="#0d1721"/>
+  <!-- Highlight glints -->
+  <circle cx="53.5" cy="42.5" r="1" fill="white" opacity="0.8"/>
+  <circle cx="63.5" cy="42.5" r="1" fill="white" opacity="0.8"/>
+
+  <!-- Secondary eyes (smaller, flanking) -->
+  <circle cx="47" cy="46" r="2.5" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+  <circle cx="73" cy="46" r="2.5" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+  <circle cx="47" cy="46" r="1.2" fill="#86baf5"/>
+  <circle cx="73" cy="46" r="1.2" fill="#86baf5"/>
+
+  <!-- Tertiary eyes (rear row, smaller still) -->
+  <circle cx="50" cy="38" r="1.8" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+  <circle cx="70" cy="38" r="1.8" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+</svg>

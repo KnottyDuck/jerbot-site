@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 560" width="400" height="560">
+  <rect width="400" height="560" fill="#182d3c"/>
+
+  <!-- subtle grid -->
+  <line x1="0" y1="140" x2="400" y2="140" stroke="#86baf5" stroke-width="0.4" opacity="0.18"/>
+  <line x1="0" y1="280" x2="400" y2="280" stroke="#86baf5" stroke-width="0.4" opacity="0.18"/>
+  <line x1="0" y1="420" x2="400" y2="420" stroke="#86baf5" stroke-width="0.4" opacity="0.18"/>
+  <line x1="133" y1="0" x2="133" y2="560" stroke="#86baf5" stroke-width="0.4" opacity="0.18"/>
+  <line x1="267" y1="0" x2="267" y2="560" stroke="#86baf5" stroke-width="0.4" opacity="0.18"/>
+
+  <!-- ===== GAZE CONE from Jayms (right edge) sweeping left toward spider centre ===== -->
+  <!-- Soft radial wedge: origin at Jayms eye position (right edge ~390,195), pointing left to spider at 200,240 -->
+  <defs>
+    <radialGradient id="gazeCone" cx="100%" cy="50%" r="80%" fx="100%" fy="50%">
+      <stop offset="0%" stop-color="#c9952a" stop-opacity="0.22"/>
+      <stop offset="60%" stop-color="#c9952a" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#c9952a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fade-l" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#0d1721" stop-opacity="1"/>
+      <stop offset="1" stop-color="#0d1721" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Cone polygon: apex at right edge, wide sweep covering spider zone -->
+  <polygon points="400,195 70,100 30,240 70,380 400,290" fill="url(#gazeCone)" opacity="0.9"/>
+
+  <!-- ===== SPIDER — large, centred hero ===== -->
+  <!-- Spider geometry from approved icon, scaled ~3.4×, centred at 200,240 -->
+  <!-- Original geometry cx≈60 cy≈62 (cephalothorax centre) → translate(200,240) scale(3.4) translate(-60,-62) -->
+  <g transform="translate(200,240) scale(3.4) translate(-60,-62)">
+    <!-- Legs — front pair raised (alert pose) -->
+    <path d="M46,54 C36,48 24,38 12,26" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M45,58 C32,54 20,50 8,44" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M74,54 C84,48 96,38 108,26" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M75,58 C88,54 100,50 112,44" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Rear legs -->
+    <path d="M46,68 C36,74 26,82 18,94" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M48,72 C38,82 30,90 22,102" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M74,68 C84,74 94,82 102,94" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <path d="M72,72 C82,82 90,90 98,102" stroke="#f4eedc" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <!-- Abdomen -->
+    <ellipse cx="60" cy="80" rx="18" ry="22" fill="#f4eedc" stroke="#0d1721" stroke-width="2"/>
+    <path d="M54,71 Q60,68 66,71" stroke="#0d1721" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M52,78 Q60,75 68,78" stroke="#0d1721" stroke-width="1" fill="none" opacity="0.5"/>
+    <path d="M53,85 Q60,82 67,85" stroke="#0d1721" stroke-width="1" fill="none" opacity="0.5"/>
+    <!-- Pedicel -->
+    <ellipse cx="60" cy="59" rx="5" ry="4" fill="#f4eedc" stroke="#0d1721" stroke-width="1.5"/>
+    <!-- Cephalothorax -->
+    <ellipse cx="60" cy="48" rx="17" ry="14" fill="#f4eedc" stroke="#0d1721" stroke-width="2"/>
+    <!-- Chelicerae -->
+    <path d="M56,60 L54,65" stroke="#0d1721" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M64,60 L66,65" stroke="#0d1721" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Principal eyes -->
+    <circle cx="55" cy="46" r="6" fill="#0d1721" stroke="#f4eedc" stroke-width="1"/>
+    <circle cx="65" cy="46" r="6" fill="#0d1721" stroke="#f4eedc" stroke-width="1"/>
+    <circle cx="55" cy="46" r="3.5" fill="#86baf5"/>
+    <circle cx="65" cy="46" r="3.5" fill="#86baf5"/>
+    <circle cx="55" cy="46" r="1.5" fill="#0d1721"/>
+    <circle cx="65" cy="46" r="1.5" fill="#0d1721"/>
+    <circle cx="53.5" cy="44.5" r="1" fill="white" opacity="0.8"/>
+    <circle cx="63.5" cy="44.5" r="1" fill="white" opacity="0.8"/>
+    <!-- Secondary eyes -->
+    <circle cx="47" cy="48" r="2.5" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+    <circle cx="73" cy="48" r="2.5" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+    <circle cx="47" cy="48" r="1.2" fill="#86baf5"/>
+    <circle cx="73" cy="48" r="1.2" fill="#86baf5"/>
+    <!-- Tertiary eyes -->
+    <circle cx="50" cy="40" r="1.8" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+    <circle cx="70" cy="40" r="1.8" fill="#0d1721" stroke="#f4eedc" stroke-width="0.75"/>
+  </g>
+
+  <!-- ===== JAYMS — bigger, leaning in from right edge ===== -->
+  <!-- Scaled up ~1.9× vs prior version. Body anchored at right edge, leaning left. -->
+  <!-- Hair (voluminous, warm dark) -->
+  <ellipse cx="352" cy="152" rx="34" ry="22" fill="#1a0a04" stroke="#0d1721" stroke-width="1.5"/>
+  <ellipse cx="326" cy="160" rx="13" ry="17" fill="#1a0a04" stroke="#0d1721" stroke-width="1.5"/>
+  <ellipse cx="378" cy="160" rx="13" ry="17" fill="#1a0a04" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- Head -->
+  <ellipse cx="352" cy="178" rx="28" ry="30" fill="#4a2010" stroke="#0d1721" stroke-width="2"/>
+  <!-- Eyes -->
+  <ellipse cx="342" cy="175" rx="8" ry="9" fill="#0d1721"/>
+  <ellipse cx="362" cy="175" rx="8" ry="9" fill="#0d1721"/>
+  <ellipse cx="340" cy="173" rx="2.5" ry="2.5" fill="white" opacity="0.9"/>
+  <ellipse cx="360" cy="173" rx="2.5" ry="2.5" fill="white" opacity="0.9"/>
+  <!-- Warm smile -->
+  <path d="M340 188 Q352 198 364 188" fill="none" stroke="#0d1721" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Neck -->
+  <rect x="344" y="207" width="18" height="12" rx="3" fill="#4a2010" stroke="#0d1721" stroke-width="1.5"/>
+  <!-- Body / torso leaning left (jacket) -->
+  <path d="M318 222 Q336 216 368 222 L375 290 L310 290 Z" fill="#c9952a" stroke="#0d1721" stroke-width="2"/>
+  <!-- Left arm reaching forward (into poster, toward spider) -->
+  <path d="M318 230 Q292 242 268 260" fill="none" stroke="#4a2010" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="266" cy="262" r="7" fill="#4a2010" stroke="#0d1721" stroke-width="1.5"/>
+
+  <!-- ===== TITLE ===== -->
+  <text x="200" y="430" font-family="monospace" font-size="14" font-weight="bold" fill="#86baf5" text-anchor="middle" letter-spacing="2">AVOIDING JAYMS</text>
+  <text x="200" y="452" font-family="monospace" font-size="10" fill="#f4eedc" text-anchor="middle" letter-spacing="1">A tiny jumping spider.</text>
+  <text x="200" y="466" font-family="monospace" font-size="10" fill="#f4eedc" text-anchor="middle" letter-spacing="1">One very curious friend.</text>
+  <!-- lime accent rule -->
+  <line x1="140" y1="480" x2="260" y2="480" stroke="#84cc16" stroke-width="2"/>
+  <text x="200" y="500" font-family="monospace" font-size="9" fill="#86baf5" text-anchor="middle" opacity="0.7" letter-spacing="1">In concept</text>
+</svg>
