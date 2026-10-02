@@ -44,17 +44,17 @@ body.home::before { display: block; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 10px 22px;
+  min-height: 50px;
+  padding: 11px 23px;
   border-radius: 5px;
   background: var(--lime);
   color: #16220c;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 800;
   text-decoration: none;
 }
 .home .play-link:hover { background: #d0fa83; }
-.home-nav > .play-link { min-height: 44px; }
+.home-nav > .play-link { min-width: 114px; min-height: 48px; }
 .home .mobile-nav { display: none; }
 
 /* The six approved figures share one stage. Spacing prevents hidden faces. */
@@ -119,9 +119,9 @@ body.home::before { display: block; }
 
 /* One local carousel. Whole images remain visible inside larger frames. */
 .marquee {
-  padding: 32px max(24px, calc((100% - 1320px)/2)) 38px;
+  padding: 35px max(24px, calc((100% - 1320px)/2)) 42px;
   border-block: 1px solid #42676a;
-  background: #153034;
+  background: #19322e;
 }
 .marquee-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
 .marquee h2 { margin: 0; color: #e8f0e8; font-size: 20px; font-weight: 800; text-transform: none; letter-spacing: 0; }
@@ -145,26 +145,26 @@ body.home::before { display: block; }
   padding-bottom: 6px;
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
-  scrollbar-color: #749291 #153034;
+  scrollbar-color: #749291 #19322e;
 }
 .screen-track figure {
-  flex: 0 0 475px;
+  flex: 0 0 525px;
   margin: 0;
   padding: 10px;
   border: 1px solid #638380;
   border-radius: 7px;
-  background: #213a3d;
+  background: #213a35;
   scroll-snap-align: start;
 }
-.screen-track figure:nth-child(odd) { flex-basis: 330px; }
+.screen-track figure:nth-child(odd) { flex-basis: 380px; }
 .screen-track a { display: block; }
 .screen-track img {
   display: block;
   width: 100%;
-  height: 304px;
+  height: 355px;
   border: 0;
   border-radius: 4px;
-  background: #111e21;
+  background: #142822;
   object-fit: contain;
 }
 .screen-track figcaption { padding: 10px 4px 2px; color: #f1f3ec; font-size: 15px; font-weight: 700; }
@@ -191,12 +191,13 @@ body.home::before { display: block; }
   align-items: center;
   gap: 28px 38px;
   width: min(100%, 1010px);
-  min-height: 352px;
+  min-height: 390px;
   margin: 0 auto;
   padding: 36px;
   border: 1px solid #647575;
+  border-left: 4px solid var(--card-accent, #9cb083);
   border-radius: 8px;
-  background: #1b282b;
+  background: #202b28;
 }
 .home-card-copy { min-width: 0; }
 .home-card h3 { margin: 0 0 18px; font-size: 42px; line-height: 1.08; letter-spacing: 0; }
@@ -218,12 +219,14 @@ body.home::before { display: block; }
   align-items: center;
   justify-content: center;
   min-width: 0;
-  min-height: 275px;
-  height: 100%;
+  min-height: 0;
+  height: auto;
+  aspect-ratio: 8/5;
+  align-self: center;
   overflow: hidden;
   border: 1px solid #536d6c;
   border-radius: 6px;
-  background: #243639;
+  background: #1c302c;
 }
 .card-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .poster-art img { width: auto; max-width: 100%; }
@@ -235,20 +238,17 @@ body.home::before { display: block; }
 #rug-pulled {
   grid-template-areas: "copy art" "actions art";
   grid-template-rows: 1fr auto;
-  min-height: 395px;
-  border-color: #9bc083;
-  background: #202b28;
+  min-height: 390px;
+  --card-accent: #b7ed59;
 }
 #rug-pulled .home-card-copy { grid-area: copy; }
 #rug-pulled .card-art { grid-area: art; align-self: center; min-height: 0; height: auto; aspect-ratio: 8/5; }
 #rug-pulled .card-art img { width: 100%; height: auto; aspect-ratio: 8/5; object-fit: contain; }
 #rug-pulled .home-card-actions { grid-area: actions; align-self: end; }
-#avoiding-jayms { border-color: #a98465; background: #302822; }
-#avoiding-jayms .card-art { border-color: #a27d5c; background: #3c3028; }
-#rug-pulled-live { border-color: #65a39a; background: #17322f; }
-#rug-pulled-live .card-art { border-color: #5d9d96; background: #204440; }
-#pubmint { border-color: #938ca8; background: #292a37; }
-#pubmint .card-art { border-color: #817d9b; background: #343648; }
+#rug-pulled .home-card-actions .play-link { min-width: 200px; }
+#avoiding-jayms { --card-accent: #c69e71; }
+#rug-pulled-live { --card-accent: #72aaa0; }
+#pubmint { --card-accent: #a8a2b9; }
 .edge { display: none; position: absolute; top: 50%; width: 145px; max-height: 285px; object-fit: contain; transform: translateY(-50%); pointer-events: none; }
 .edge-left { left: 0; }
 .edge-right { right: 0; }
@@ -256,7 +256,7 @@ body.home::before { display: block; }
 /* A single company strip; text marks avoid unlicensed third-party logos. */
 .built-with { padding: 52px 24px 55px; border-block: 1px solid #6d6555; background: #302c26; }
 .built-with ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 9px; max-width: 1030px; margin: 0 auto; padding: 0; list-style: none; }
-.built-with li { min-width: 115px; padding: 9px 11px; border: 1px solid #817661; border-radius: 4px; color: #f2ebe0; font-size: 15px; font-weight: 700; text-align: center; }
+.built-with li { min-width: 115px; padding: 10px 11px; border-bottom: 1px solid #817661; color: #f2ebe0; font-size: 15px; font-weight: 700; text-align: center; }
 .built-with p { margin: 21px 0 0; color: #ded6c7; font-size: 14px; text-align: center; }
 
 /* A warm About panel gives the page a pause without moving its content. */
@@ -287,7 +287,7 @@ body.home::before { display: block; }
 }
 @media (min-width: 701px) and (max-width: 900px) {
   .home-card { grid-template-columns: 1fr; gap: 22px; min-height: 0; }
-  .home-card .card-art { min-height: 0; height: 320px; }
+  .home-card .card-art { min-height: 0; height: auto; }
   #rug-pulled { grid-template-areas: "copy" "art" "actions"; grid-template-rows: auto; min-height: 0; }
   .home-card p { max-width: 58ch; }
 }
@@ -310,8 +310,8 @@ body.home::before { display: block; }
   .marquee-heading { flex-wrap: wrap; }
   .marquee h2 { font-size: 18px; }
   .screen-track { gap: 12px; }
-  .screen-track figure, .screen-track figure:nth-child(odd) { flex-basis: min(83vw, 330px); }
-  .screen-track img { height: 303px; }
+  .screen-track figure, .screen-track figure:nth-child(odd) { flex-basis: min(88vw, 355px); }
+  .screen-track img { height: 355px; }
   .home-products { padding: 46px 16px 54px; }
   .home .band-title { margin-bottom: 24px; }
   .product-row { margin-bottom: 22px; }
@@ -319,10 +319,10 @@ body.home::before { display: block; }
   .home-card h3 { margin-bottom: 14px; font-size: 32px; }
   .home-card p { margin-bottom: 13px; font-size: 16px; line-height: 1.5; }
   .product-mark { width: 58px; height: 58px; margin-bottom: 15px; }
-  .card-art { grid-row: auto; min-height: 230px; height: 230px; }
+  .card-art { grid-row: auto; min-height: 0; height: auto; }
   #rug-pulled { grid-template-areas: "copy" "art" "actions"; grid-template-rows: auto; min-height: 0; }
   #rug-pulled .home-card-actions { display: grid; justify-items: start; }
-  #rug-pulled .home-card-actions .play-link { min-width: 170px; }
+  #rug-pulled .home-card-actions .play-link { width: 100%; min-width: 0; }
   .friends-art img { width: 45%; max-width: 155px; }
   .built-with { padding: 45px 16px 49px; }
   .built-with ul { gap: 8px; }
