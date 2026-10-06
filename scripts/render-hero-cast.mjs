@@ -3,7 +3,8 @@
  * site SVGs. Run with AVATAR_ENGINE_ROOT pointing at rug-pulled-live containing
  * PR #17 (or its eventual merged successor):
  *   AVATAR_ENGINE_ROOT=/path/to/rug-pulled-live node scripts/render-hero-cast.mjs
- * The fifth figure is a transparent derivative of the approved ROOT spider;
+ * The fifth figure is A's transparent root-derived spider-edge-512.png from
+ * jerbot-site-assets a/aj-card-art-20261002; this script verifies its hash.
  * assets/cast/spider.svg itself remains byte-identical to the approved source.
  */
 import assert from 'node:assert/strict';
@@ -26,11 +27,9 @@ const { renderToStaticMarkup } = requireEngine('react-dom/server');
 const spider = await readFile(join(siteRoot, 'assets/cast/spider.svg'));
 const spiderHash = createHash('sha256').update(spider).digest('hex');
 assert.equal(spiderHash, 'edc053b01c8b8eed1d325a8acf4982e8ff773434eb1fedcc96b0e1a43b0dab51', 'the fifth figure must be the unchanged approved ROOT spider');
-const spiderSource = spider.toString('utf8');
-const opaqueBackground = '  <rect width="100" height="100" fill="#0e1116"/>\n';
-assert.equal(spiderSource.split(opaqueBackground).length, 2, 'only the ROOT background rectangle may be removed');
-const transparentSpider = spiderSource.replace(opaqueBackground, '');
-await writeFile(join(siteRoot, 'assets/cast/hero-spider-transparent.svg'), transparentSpider);
+const spiderEdge = await readFile(join(siteRoot, 'assets/cast/spider-edge-512.png'));
+const spiderEdgeHash = createHash('sha256').update(spiderEdge).digest('hex');
+assert.equal(spiderEdgeHash, '4bcea77cdab9ea16a139bef82ccae42c775022ca8b99ccf5102bd53ffd008c03', 'the fifth figure must be A’s approved root-derived transparent edge art');
 
 const figures = [
   { file: 'hero-trader-m.svg', pose: 'male-trader-open', visualTop: 8, visualHeight: 115, appearance: { sex: 'm', skin: 2, themeId: 'desk-jacket', hairStyle: 'short', hairColor: 'black' } },
@@ -84,4 +83,4 @@ try {
 } finally {
   await server.close();
 }
-console.log(`engine HEAD ${engineSha}; approved root spider SHA-256 ${spiderHash}; transparent hero spider derived by background removal only`);
+console.log(`engine HEAD ${engineSha}; approved ROOT spider SHA-256 ${spiderHash}; A spider-edge-512.png SHA-256 ${spiderEdgeHash}`);
