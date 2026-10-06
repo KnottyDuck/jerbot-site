@@ -28,7 +28,7 @@
 don't sell anything about you to anyone. This page says exactly what I hold and
 how to get rid of it.</p>
 
-<p class="card-meta">Last updated 26 September 2026</p>
+<p class="card-meta">Last updated 6 October 2026</p>
 
 <h2>The short version</h2>
 
@@ -102,8 +102,9 @@ and it is not a store review.</p>
       Ka$h and items stay in your browser's local storage on your own device.
       Nothing uploads them automatically and there is no cloud save. The only
       way a save reaches me is if you attach it to feedback yourself.</li>
-  <li><strong>Analytics or tracking.</strong> No tracking pixels, no advertising
-      networks, no third-party scripts watching you.</li>
+  <li><strong>Analytics or advertising tracking.</strong> No tracking pixels or
+      advertising networks. When the sign-in check is on, Cloudflare Turnstile
+      runs a browser security check, described below; it is not site analytics.</li>
   <li><strong>Payment information.</strong> Nothing is for sale yet. When that
       changes, a payment processor will handle it and this page will say so.</li>
   <li><strong>Anything about children.</strong> These services aren't directed
@@ -125,11 +126,19 @@ there.</p>
   <li><strong>Supabase</strong> — stores the account, the play-session
       records, feedback, and device details if you share them.</li>
   <li><strong>Cloudflare</strong> — serves these pages and the game, and keeps
-      standard server logs as any web host does.</li>
+      standard server logs as any web host does. When the sign-in check is on,
+      its Turnstile widget also processes browser security signals, including
+      IP address, browser user agent, TLS fingerprint, and the widget's site key
+      and origin, to distinguish people from automated traffic. Cloudflare says
+      it does not access, store, or transmit form entries. See
+      <a href="https://www.cloudflare.com/turnstile-privacy-policy/">Cloudflare's
+      Turnstile Privacy Addendum</a>.</li>
 </ul>
 
-<p>Both are service providers acting for me. Nobody else receives your data, and
-I don't sell or share it.</p>
+<p>Supabase and Cloudflare provide services needed to run the beta. When the
+sign-in check is on, Cloudflare processes Turnstile signals to protect this site
+and may also use them as an independent controller to improve detection, as its
+privacy addendum explains. I don't sell your personal information.</p>
 
 <h2>How long I keep it</h2>
 
