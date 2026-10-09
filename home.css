@@ -57,7 +57,7 @@ body.home::before { display: block; }
 .home-nav > .play-link { min-width: 114px; min-height: 48px; }
 .home .mobile-nav { display: none; }
 
-/* The six approved figures share one stage. Spacing prevents hidden faces. */
+/* The six approved figures retain the equal tiles merged in PR #3. */
 .cast-hero {
   padding: 34px 24px 49px;
   overflow: hidden;
@@ -66,43 +66,25 @@ body.home::before { display: block; }
 }
 .hero-kicker { margin: 0; color: #d4c7a8; font-size: 14px; font-weight: 700; }
 .cast {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  align-items: end;
-  gap: 8px;
-  width: min(100%, 1090px);
-  height: 250px;
-  margin: 22px auto 15px;
-  border-bottom: 2px solid #607769;
-}
-.cast::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 58px;
-  background: #273432;
-  pointer-events: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 1100px;
+  margin: 20px auto 8px;
 }
 .cast img {
-  position: relative;
-  inset: auto;
-  z-index: 1;
   display: block;
-  width: 100%;
-  max-width: 190px;
-  height: 215px;
-  margin: 0 auto;
+  box-sizing: border-box;
+  flex: 0 0 160px;
+  width: 160px;
+  height: 160px;
   object-fit: contain;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
 }
-.cast .cast-trader-m { order: 1; height: 238px; }
-.cast .cast-trader-f { order: 2; height: 207px; }
-.cast .cast-spider { order: 3; height: 210px; }
-.cast .cast-jayms { order: 4; height: 216px; }
-.cast .cast-friend-f { order: 5; height: 202px; }
-.cast .cast-friend-m { order: 6; height: 219px; }
 .cast-hero h1 {
   display: flex;
   align-items: center;
@@ -277,10 +259,11 @@ body.home::before { display: block; }
   .home-card { width: min(calc(100% - 330px), 1010px); }
   .edge { display: block; }
 }
+@media (max-width: 1099px) {
+  .cast { gap: 8px; }
+  .cast img { flex-basis: 120px; width: 120px; height: 120px; }
+}
 @media (max-width: 980px) {
-  .cast { height: 215px; }
-  .cast img, .cast .cast-trader-m, .cast .cast-trader-f, .cast .cast-spider,
-  .cast .cast-jayms, .cast .cast-friend-f, .cast .cast-friend-m { height: 185px; }
   .cast-hero h1 { font-size: 64px; }
   .home-card { gap: 22px; padding: 29px; }
   .home-card h3 { font-size: 36px; }
@@ -291,6 +274,10 @@ body.home::before { display: block; }
   #rug-pulled { grid-template-areas: "copy" "art" "actions"; grid-template-rows: auto; min-height: 0; }
   .home-card p { max-width: 58ch; }
 }
+@media (min-width: 701px) and (max-width: 800px) {
+  .cast { gap: 2px; }
+  .cast img { flex-basis: min(120px, calc((100% - 10px)/6)); width: min(120px, calc((100% - 10px)/6)); height: auto; aspect-ratio: 1; }
+}
 @media (max-width: 700px) {
   .home-nav { min-height: 62px; flex-wrap: wrap; gap: 8px; padding: 7px 16px; }
   .home-nav .wordmark { font-size: 18px; }
@@ -300,10 +287,8 @@ body.home::before { display: block; }
   .mobile-nav summary { display: flex; align-items: center; min-height: 44px; cursor: pointer; font-size: 14px; }
   .mobile-nav nav { position: absolute; top: 100%; right: 0; left: 0; display: flex; flex-wrap: wrap; gap: 24px; padding: 16px; border-bottom: 1px solid var(--line); background: #151d20; }
   .cast-hero { padding: 28px 16px 40px; }
-  .cast { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 9px; max-width: 370px; height: auto; margin: 22px auto 18px; }
-  .cast::before { height: 33px; }
-  .cast img, .cast .cast-trader-m, .cast .cast-trader-f, .cast .cast-spider,
-  .cast .cast-jayms, .cast .cast-friend-f, .cast .cast-friend-m { width: 100%; max-width: 124px; height: 126px; }
+  .cast { gap: 10px; max-width: 380px; }
+  .cast img { flex-basis: min(120px, calc((100% - 20px)/3)); width: min(120px, calc((100% - 20px)/3)); height: auto; aspect-ratio: 1; }
   .cast-hero h1 { margin: 4px 0 9px; font-size: 52px; }
   .tagline { max-width: 320px; margin: auto; font-size: 19px; line-height: 1.35; }
   .marquee { padding: 26px 16px 31px; }
@@ -338,8 +323,6 @@ body.home::before { display: block; }
 @media (max-width: 370px) {
   .home-nav .wordmark { font-size: 16px; }
   .home-nav > .play-link { padding-inline: 8px; }
-  .cast img, .cast .cast-trader-m, .cast .cast-trader-f, .cast .cast-spider,
-  .cast .cast-jayms, .cast .cast-friend-f, .cast .cast-friend-m { height: 110px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .home *, .home *::before, .home *::after { animation-duration: 0s !important; transition-duration: 0s !important; scroll-behavior: auto !important; }
@@ -348,10 +331,8 @@ body.home::before { display: block; }
   body.home { --ink: #000; --panel: #000; --paper: #fff; --muted: #fff; --line: #fff; --texture-trace: #000; background: #000; }
   .cast-hero, .marquee, .home-products, .home-card, .built-with, .home-about, .home-about > div, .home-contact, .home-footer { background: #000; color: #fff; }
   .home-about h3, .home-about p, .home-about .detail-link { color: #fff; }
-  .cast::before { display: none; }
 }
 @media (forced-colors: active) {
   body.home, .cast-hero, .marquee, .home-products, .home-card, .built-with, .home-about, .home-about > div, .home-contact, .home-footer { background: Canvas; color: CanvasText; }
-  .cast::before { display: none; }
   .home .play-link { background: ButtonFace; color: ButtonText; border: 1px solid ButtonText; }
 }
