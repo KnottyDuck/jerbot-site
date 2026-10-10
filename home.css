@@ -208,11 +208,6 @@ body.home::before { display: block; }
   background: #1c302c;
 }
 .card-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.jayms-art { gap: clamp(18px, 4vw, 42px); padding: 20px 28px; }
-.jayms-art .jayms-spider { width: min(42%, 220px); height: auto; object-fit: contain; }
-.jayms-art .jayms-friend { width: min(42%, 220px); height: auto; object-fit: contain; align-self: flex-end; margin-bottom: -8px; }
-.friends-art { gap: 16px; }
-.friends-art img { width: 45%; max-width: 220px; height: auto; }
 .pubmint-art img { width: 56%; max-width: 250px; height: auto; }
 .home .detail-link { display: block; width: fit-content; margin-top: 17px; color: var(--paper); font-size: 15px; font-weight: 700; text-underline-offset: 4px; }
 .home .detail-link:hover { color: var(--lime); }
@@ -304,8 +299,6 @@ body.home::before { display: block; }
   #rug-pulled { grid-template-areas: "copy" "art" "actions"; grid-template-rows: auto; min-height: 0; }
   #rug-pulled .home-card-actions { display: grid; justify-items: start; }
   #rug-pulled .home-card-actions .play-link { width: 100%; min-width: 0; }
-  .jayms-art { gap: 12px; padding: 14px; }
-  .friends-art img { width: 45%; max-width: 175px; }
   .built-with { padding: 45px 16px 49px; }
   .built-with ul { gap: 8px; }
   .built-with li { width: calc((100% - 16px)/3); min-width: 0; padding: 9px 4px; font-size: 14px; }
