@@ -125,11 +125,20 @@ there.</p>
   <li><strong>Supabase</strong> — stores the account, the play-session
       records, feedback, and device details if you share them.</li>
   <li><strong>Cloudflare</strong> — serves these pages and the game, and keeps
-      standard server logs as any web host does.</li>
+      standard server logs as any web host does. When Turnstile is enabled for
+      beta sign-in, Cloudflare also runs browser security checks to distinguish
+      people from automated traffic. Turnstile processes signals such as the
+      visitor's IP address, TLS fingerprint, browser user-agent, and the
+      widget's site key and origin. Cloudflare says it uses these signals to
+      detect bots and improve Turnstile's detection. It does not access, store,
+      or transmit form entries or other page inputs. Read
+      <a href="https://www.cloudflare.com/turnstile-privacy-policy/">Cloudflare's
+      Turnstile Privacy Addendum</a>.</li>
 </ul>
 
-<p>Both are service providers acting for me. Nobody else receives your data, and
-I don't sell or share it.</p>
+<p>Supabase and Cloudflare provide services needed to run the beta. Cloudflare's
+Turnstile may also use the signals above to improve detection, as described in
+its privacy addendum. I don't sell your personal information.</p>
 
 <h2>How long I keep it</h2>
 
