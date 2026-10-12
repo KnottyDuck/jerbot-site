@@ -332,3 +332,96 @@ body.home::before { display: block; }
   body.home, .cast-hero, .marquee, .home-products, .home-card, .built-with, .home-about, .home-about > div, .home-contact, .home-footer { background: Canvas; color: CanvasText; }
   .home .play-link { background: ButtonFace; color: ButtonText; border: 1px solid ButtonText; }
 }
+
+/* Section colors are explicit in both themes; art and copy keep their layout. */
+body.home {
+  --ink:#f5f6ef; --panel:#fff; --paper:#172119; --muted:#505c52;
+  --line:#74806d; --lime:#426800; --texture-trace:#becbb9;
+  --home-nav:#fff; --home-hero:#f1eee5; --home-kicker:#495542;
+  --home-marquee:#e1eee8; --home-marquee-title:#17352d;
+  --home-control:#f6faf7; --home-control-border:#52756c;
+  --home-frame:#f8fbf8; --home-screen:#142822;
+  --home-products:#ecf1e8; --home-card:#fff; --home-card-copy:#35463b;
+  --home-status:#26352c; --home-art:#e5ece6;
+  --home-built:#eee5d6; --home-about:#e9eee7;
+  --home-about-card:#fff7e8; --home-contact:#dcece4;
+  --home-footer:#e8ede5; --home-action:#426800;
+  --home-action-hover:#223800; --home-action-text:#f8ffe9;
+  color-scheme:light; background:var(--ink); color:var(--paper);
+}
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme]) body.home {
+    --ink:#141c20; --panel:#202b2d; --paper:#f3f0e7; --muted:#c3d0cf;
+    --line:#536566; --lime:#b7ed59; --texture-trace:#2f4b45;
+    --home-nav:#151d20; --home-hero:#1b2029; --home-kicker:#d4c7a8;
+    --home-marquee:#19322e; --home-marquee-title:#e8f0e8;
+    --home-control:#26474a; --home-control-border:#668a88;
+    --home-frame:#213a35; --home-screen:#142822;
+    --home-products:#212b29; --home-card:#202b28; --home-card-copy:#d1dad6;
+    --home-status:#ece8d8; --home-art:#1c302c;
+    --home-built:#302c26; --home-about:#29342f;
+    --home-about-card:#e8e1d1; --home-contact:#18342f;
+    --home-footer:#192320; --home-action:#b7ed59;
+    --home-action-hover:#d0fa83; --home-action-text:#16220c;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"] body.home {
+  --ink:#141c20; --panel:#202b2d; --paper:#f3f0e7; --muted:#c3d0cf;
+  --line:#536566; --lime:#b7ed59; --texture-trace:#2f4b45;
+  --home-nav:#151d20; --home-hero:#1b2029; --home-kicker:#d4c7a8;
+  --home-marquee:#19322e; --home-marquee-title:#e8f0e8;
+  --home-control:#26474a; --home-control-border:#668a88;
+  --home-frame:#213a35; --home-screen:#142822;
+  --home-products:#212b29; --home-card:#202b28; --home-card-copy:#d1dad6;
+  --home-status:#ece8d8; --home-art:#1c302c;
+  --home-built:#302c26; --home-about:#29342f;
+  --home-about-card:#e8e1d1; --home-contact:#18342f;
+  --home-footer:#192320; --home-action:#b7ed59;
+  --home-action-hover:#d0fa83; --home-action-text:#16220c;
+  color-scheme:dark;
+}
+.home-nav,.home .mobile-nav nav { background:var(--home-nav); border-color:var(--line); }
+.home .play-link { background:var(--home-action); color:var(--home-action-text); }
+.home .play-link:hover { background:var(--home-action-hover); }
+.cast-hero { background:var(--home-hero); }
+.hero-kicker { color:var(--home-kicker); }
+.marquee { background:var(--home-marquee); border-color:var(--line); }
+.marquee h2 { color:var(--home-marquee-title); }
+.home button { background:var(--home-control); border-color:var(--home-control-border); color:var(--paper); }
+.screen-track { scrollbar-color:var(--home-control-border) var(--home-marquee); }
+.screen-track figure { background:var(--home-frame); border-color:var(--line); }
+.screen-track img { background:var(--home-screen); }
+.screen-track figcaption { color:var(--paper); }
+.carousel-dots [aria-current="true"] { background:var(--home-action); color:var(--home-action-text); }
+.home-products { background:var(--home-products); }
+.home .band-title { color:var(--paper); }
+.home-card { background:var(--home-card); border-color:var(--line); }
+.home-card p,.home-card .product-meta { color:var(--home-card-copy); }
+.product-status { color:var(--home-status); border-color:var(--line); }
+.card-art { background:var(--home-art); border-color:var(--line); }
+.built-with { background:var(--home-built); border-color:var(--line); }
+.built-with li,.built-with p { color:var(--paper); border-color:var(--line); }
+.home-about { background:var(--home-about); }
+.home-about > div { background:var(--home-about-card); }
+.home-contact { background:var(--home-contact); border-color:var(--line); }
+.home-contact a { color:var(--lime); }
+.home-footer { background:var(--home-footer); color:var(--paper); border-color:var(--line); }
+@media (forced-colors:active) {
+  body.home,.cast-hero,.marquee,.home-products,.home-card,.built-with,.home-about,.home-about > div,.home-contact,.home-footer { background:Canvas; color:CanvasText; }
+}
+@media (prefers-contrast:more) {
+  body.home,:root[data-theme="dark"] body.home,:root:not([data-theme]) body.home {
+    --ink:#000; --panel:#000; --paper:#fff; --muted:#fff; --line:#fff;
+    --home-nav:#000; --home-hero:#000; --home-marquee:#000; --home-marquee-title:#fff;
+    --home-control:#000; --home-control-border:#fff; --home-frame:#000;
+    --home-products:#000; --home-card:#000; --home-card-copy:#fff;
+    --home-status:#fff; --home-art:#000; --home-built:#000;
+    --home-about:#000; --home-about-card:#000; --home-contact:#000; --home-footer:#000;
+  }
+  .home-about h3,.home-about p,.home-about .detail-link { color:#fff; }
+}
+@media (forced-colors:active) {
+  body.home,:root[data-theme="dark"] body.home,:root:not([data-theme]) body.home { --ink:Canvas; --panel:Canvas; --paper:CanvasText; --muted:CanvasText; --line:CanvasText; }
+  body.home,.cast-hero,.marquee,.home-products,.home-card,.built-with,.home-about,.home-about > div,.home-contact,.home-footer { background:Canvas; color:CanvasText; }
+}
