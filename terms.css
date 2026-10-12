@@ -1,0 +1,4 @@
+.terms h2 { font-size: 1.3rem; line-height: 1.25; letter-spacing: 0; margin: 2rem 0 .6rem; }
+.terms p { max-width: 70ch; line-height: 1.6; }
+.terms .terms-summary { font-size: 1.08rem; color: var(--paper); }
+.terms a { color: var(--lime); text-underline-offset: .2em; }
