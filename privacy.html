@@ -24,11 +24,11 @@
 
 <h1>What I collect, and what I don't</h1>
 
-<p>Jerbot is one person in Texas. I don't run ads, I don't use analytics, and I
-don't sell anything about you to anyone. This page says exactly what I hold and
-how to get rid of it.</p>
+<p>Jerbot is one person in Texas. I don't show ads on this site and I don't
+sell anything about you to anyone. This page says exactly what I hold and how
+to get rid of it.</p>
 
-<p class="card-meta">Last updated 26 September 2026</p>
+<p class="card-meta">Last updated 12 October 2026</p>
 
 <p>See also the <a href="terms.html">Terms of Use and Beta Terms</a> for the rules of the closed beta.</p>
 
@@ -36,8 +36,9 @@ how to get rid of it.</p>
 
 <p>Rug Pulled! is in closed beta, so playing it means signing in with a free
 account. By default I hold <strong>your email address</strong> and <strong>a
-record of when you played</strong>. Nothing else, unless you choose one of the
-three things below.</p>
+record of when you played</strong>. If you arrived from an ad or link, I also
+record the non-personal sign-up source label described below. Nothing else,
+unless you choose one of the three things below.</p>
 
 <p><strong>Your game saves never reach me on their own.</strong> Careers live in
 your own browser's storage on your own device. Signing in unlocks the game; it
@@ -56,6 +57,10 @@ copy.</p>
       ran, and a coarse note of your platform — something like
       <code>macos/chrome</code>. Not a device identifier, not a full browser
       fingerprint.</li>
+  <li><strong>Sign-up source.</strong> If you arrive from an ad or link, I record
+      only where you came from (for example, "facebook" or "reddit") with your
+      sign-up so I can tell which channels work. The source label contains no
+      personal data.</li>
 </ul>
 
 <h2>Three things, only if you choose them</h2>
@@ -104,8 +109,12 @@ and it is not a store review.</p>
       Ka$h and items stay in your browser's local storage on your own device.
       Nothing uploads them automatically and there is no cloud save. The only
       way a save reaches me is if you attach it to feedback yourself.</li>
-  <li><strong>Analytics or tracking.</strong> No tracking pixels, no advertising
-      networks, no third-party scripts watching you.</li>
+  <li><strong>Advertising tracking.</strong> No advertising pixels are installed
+      on this site or in Rug Pulled! today. I will update this page before
+      installing any. I do not use advertising networks to track your activity
+      on this site. When
+      the sign-in check is on, Cloudflare Turnstile runs a browser security
+      check, described below; it is not site analytics.</li>
   <li><strong>Payment information.</strong> Nothing is for sale yet. When that
       changes, a payment processor will handle it and this page will say so.</li>
   <li><strong>Anything about children.</strong> These services aren't directed
@@ -127,11 +136,25 @@ there.</p>
   <li><strong>Supabase</strong> — stores the account, the play-session
       records, feedback, and device details if you share them.</li>
   <li><strong>Cloudflare</strong> — serves these pages and the game, and keeps
-      standard server logs as any web host does.</li>
+      standard server logs as any web host does. When the sign-in check is on,
+      its Turnstile widget also processes browser security signals, including
+      IP address, browser user agent, TLS fingerprint, and the widget's site key
+      and origin, to distinguish people from automated traffic. Cloudflare says
+      it does not access, store, or transmit form entries. See
+      <a href="https://www.cloudflare.com/turnstile-privacy-policy/">Cloudflare's
+      Turnstile Privacy Addendum</a>.</li>
 </ul>
 
-<p>Both are service providers acting for me. Nobody else receives your data, and
-I don't sell or share it.</p>
+<p>Supabase and Cloudflare provide services needed to run the beta. When the
+sign-in check is on, Cloudflare processes Turnstile signals to protect this site
+and may also use them as an independent controller to improve detection, as its
+privacy addendum explains. I don't sell your personal information.</p>
+
+<p>Cloudflare Web Analytics is planned for jerbot.dev and rugpulled.jerbot.dev.
+If enabled, it will count visits and page views and measure page-load performance
+so I can understand use of the sites. It is separate from your beta account and
+play-session records. Cloudflare says Web Analytics does not collect or use
+visitors' personal data.</p>
 
 <h2>How long I keep it</h2>
 
@@ -156,6 +179,9 @@ clearing your browser data removes them. The only copy I could ever have &mdash;
 a roster you chose to attach to feedback &mdash; goes with the account.</p>
 
 <p>You can also ask me to show you what I hold, or correct it.</p>
+
+<p>If you cannot use the in-game deletion control, email
+<a href="mailto:hello@jerbot.dev">hello@jerbot.dev</a> to request account deletion.</p>
 
 <p>Email <a href="mailto:hello@jerbot.dev">hello@jerbot.dev</a> and I'll handle
 it. I'm one person, so allow a few days.</p>
