@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tell Jerbot about the software or automation project you have in mind. This questionnaire opens an email draft; the site does not save your answers.">
+  <link rel="canonical" href="https://jerbot.dev/questionnaire.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Jerbot">
+  <meta property="og:title" content="Project questionnaire — Jerbot">
+  <meta property="og:description" content="Describe the software or automation project you have in mind. Answers stay on this page until you choose to open an email draft.">
+  <meta property="og:url" content="https://jerbot.dev/questionnaire.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Project questionnaire — Jerbot">
+  <meta name="twitter:description" content="Tell Jerbot about the software or automation project you have in mind.">
+  <title>Project questionnaire — Jerbot</title>
+  <script src="/theme.js"></script>
+  <script type="module" src="/questionnaire.mjs"></script>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="questionnaire.css">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:image" content="https://jerbot.dev/assets/social/jerbot-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://jerbot.dev/assets/social/jerbot-og.png">
+</head>
+<body class="questionnaire-page">
+  <a class="skip-link" href="#questionnaire-main">Skip to questionnaire</a>
+  <header class="site-header"><a class="wordmark" href="index.html" aria-label="Jerbot home">JERB<img class="wordmark-o" src="assets/brand/jerbot-mark-wordmark.svg" alt="" aria-hidden="true">T<span>_</span></a><nav aria-label="Primary navigation"><a href="index.html#products">Products</a><a href="services.html">Services</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></nav></header>
+  <main id="questionnaire-main">
+    <section class="questionnaire-intro" aria-labelledby="questionnaire-title">
+      <p class="eyebrow">Build your software</p>
+      <h1 id="questionnaire-title">Tell me about your project.</h1>
+      <p>These questions help start a useful conversation about your software or automation idea. Answer what you know; estimates and “not sure” are fine.</p>
+      <div class="questionnaire-privacy"><strong>Your answers stay here until you choose to compose an email.</strong> This page does not save or submit them to Jerbot. Your mail app opens a draft addressed to <a href="mailto:hello@jerbot.dev">hello@jerbot.dev</a>; review it and choose whether to send. Please leave out passwords, payment card numbers, and patient records.</div>
+    </section>
+
+    <form id="project-questionnaire" action="mailto:hello@jerbot.dev?subject=Jerbot%20project%20questionnaire" method="post" enctype="text/plain" autocomplete="off">
+      <fieldset class="questionnaire-step"><legend><span>01</span> About you</legend>
+        <div class="questionnaire-grid">
+          <label>Your name <span class="required">required</span><input name="name" type="text" maxlength="100" autocomplete="off" required></label>
+          <label>Business or organization<input name="business" type="text" maxlength="120" autocomplete="off"></label>
+          <label>City or region<input name="city" type="text" maxlength="100" autocomplete="off" placeholder="Austin area, elsewhere, or remote"></label>
+          <label>Website, if any<input name="website" type="url" maxlength="200" autocomplete="off" placeholder="https://example.com"></label>
+          <label>Best way to contact you <span class="required">required</span><input name="contact" type="text" maxlength="150" autocomplete="off" required placeholder="Email or another contact method"></label>
+          <label>Your time zone<input name="timeZone" type="text" maxlength="80" autocomplete="off" placeholder="For example, Central Time"></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>02</span> The problem</legend>
+        <div class="questionnaire-grid">
+          <label class="full">What process eats your time? <span class="required">required</span><textarea name="process" maxlength="450" required></textarea></label>
+          <label>Who handles it today?<input name="processOwner" type="text" maxlength="150" autocomplete="off"></label>
+          <label>How often does it happen?<input name="frequency" type="text" maxlength="120" autocomplete="off"></label>
+          <label class="full">What does it cost in hours or dollars, if known?<input name="cost" type="text" maxlength="150" autocomplete="off" placeholder="An estimate is fine"></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>03</span> What you want</legend>
+        <div class="questionnaire-grid">
+          <label>Which kind of project fits best?<select name="projectType"><option value="not sure">Not sure</option><option value="game">Game</option><option value="website">Website</option><option value="web app">Web app</option><option value="mobile app">Mobile app</option><option value="automation">Automation</option></select></label>
+          <label class="full">What outcome do you want in one sentence? <span class="required">required</span><textarea name="outcome" maxlength="300" required></textarea></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>04</span> Users</legend>
+        <div class="questionnaire-grid">
+          <label>Who will use it?<input name="users" type="text" maxlength="180" autocomplete="off"></label>
+          <label>About how many people?<input name="userCount" type="text" maxlength="100" autocomplete="off"></label>
+          <label class="full">Which devices do they use?<input name="devices" type="text" maxlength="180" autocomplete="off" placeholder="Phone, desktop, tablet, or a mix"></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>05</span> Priorities</legend>
+        <div class="questionnaire-grid">
+          <label class="full">Must-haves<textarea name="mustHaves" maxlength="400"></textarea></label>
+          <label class="full">Nice-to-haves<textarea name="niceToHaves" maxlength="400"></textarea></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>06</span> Existing tools and data</legend>
+        <div class="questionnaire-grid">
+          <label class="full">What tools do you use now?<textarea name="tools" maxlength="350" placeholder="Spreadsheets, QuickBooks, Shopify, a CRM, or something else"></textarea></label>
+          <label class="full">What data would need to connect?<textarea name="data" maxlength="350"></textarea></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>07</span> Assets you have</legend>
+        <label>Which brand, copy, art, or data assets already exist?<textarea name="assets" maxlength="350"></textarea></label>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>08</span> Constraints</legend>
+        <div class="questionnaire-grid">
+          <label>Budget band, if known<input name="budget" type="text" maxlength="120" autocomplete="off" placeholder="A range or “not sure”"></label>
+          <label>Deadline, if any<input name="deadline" type="text" maxlength="120" autocomplete="off" placeholder="A date, a season, or “flexible”"></label>
+          <div class="full"><p class="questionnaire-label">Does the project involve any of these?</p><div class="questionnaire-checks"><label><input type="checkbox" name="compliance" value="payments"> Payments</label><label><input type="checkbox" name="compliance" value="health"> Health information</label><label><input type="checkbox" name="compliance" value="minors"> Minors</label></div></div>
+          <label class="full">Other constraints or context<textarea name="otherConstraints" maxlength="300"></textarea></label>
+        </div>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>09</span> Ownership and hosting</legend>
+        <p class="questionnaire-note">Starting assumption for discussion: you own the code and accounts. Final terms are agreed in writing.</p>
+        <label>Any different ownership or hosting preference?<textarea name="ownership" maxlength="300"></textarea></label>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>10</span> Success in 90 days</legend>
+        <label>What would success look like 90 days from now?<textarea name="success" maxlength="350"></textarea></label>
+      </fieldset>
+
+      <fieldset class="questionnaire-step"><legend><span>11</span> Anything else</legend>
+        <label>What else should I know?<textarea name="anythingElse" maxlength="350"></textarea></label>
+      </fieldset>
+
+      <div class="questionnaire-finish">
+        <p>Choosing Compose email opens your mail app with a summary. Nothing is sent until you review and send it there.</p>
+        <button type="submit" class="button button-primary">Compose email <span aria-hidden="true">→</span></button>
+        <p id="questionnaire-status" role="status" aria-live="polite"></p>
+      </div>
+    </form>
+  </main>
+  <footer><a class="wordmark" href="index.html" aria-label="Jerbot home">JERB<img class="wordmark-o" src="assets/brand/jerbot-mark-wordmark.svg" alt="" aria-hidden="true">T<span>_</span></a><p>© 2026 Jerbot. Texas. · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="licenses.html">Licences</a></p></footer>
+</body>
+</html>
