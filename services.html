@@ -3,20 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jerbot is one person in Texas building working software.">
+  <meta name="description" content="Explore Rug Pulled!, Jerbot's closed-beta browser game, or ask about software and automation for your business in the Austin area or worldwide.">
   <link rel="canonical" href="https://jerbot.dev/services.html">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Jerbot">
   <meta property="og:title" content="Services — Jerbot">
-  <meta property="og:description" content="Jerbot is one person in Texas building working software.">
+  <meta property="og:description" content="Rug Pulled! is Jerbot's browser game. Build your software is project work for businesses in the Austin area and worldwide.">
   <meta property="og:url" content="https://jerbot.dev/services.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Services — Jerbot">
-  <meta name="twitter:description" content="Jerbot is one person in Texas building working software.">
+  <meta name="twitter:description" content="Explore Rug Pulled! or ask about software and automation for your business.">
   <title>Services — Jerbot</title>
   <script src="/theme.js"></script>
   <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="services.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -25,17 +24,56 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:image" content="https://jerbot.dev/assets/social/jerbot-og.png">
 </head>
-<body>
+<body class="services-v2">
   <a class="skip-link" href="#services">Skip to services</a>
   <header class="site-header"><a class="wordmark" href="index.html" aria-label="Jerbot home">JERB<img class="wordmark-o" src="assets/brand/jerbot-mark-wordmark.svg" alt="" aria-hidden="true">T<span>_</span></a><nav aria-label="Primary navigation"><a href="index.html#products">Products</a><a href="services.html" aria-current="page">Services</a><a href="about.html">About</a><a href="index.html#contact">Contact</a></nav></header>
   <main id="services">
     <section class="service-hero" aria-labelledby="services-title">
-      <div><p class="service-veteran">Veteran-made software <span aria-hidden="true">·</span> Texas</p><h1 id="services-title">You’ve seen my vision.<br>Let’s talk about <em>yours.</em></h1><p>I build software from the first useful screen to something people can actually use. The games on this site are the portfolio.</p><a class="button button-primary" href="mailto:hello@jerbot.dev?subject=Jerbot%20software%20project">Talk about a project <span aria-hidden="true">→</span></a></div>
-      <div class="character-stage service-character"><img src="assets/jerbot-character.svg" alt="Illustrated Rug Pulled character"><img class="desk-mark" src="assets/jerbot-desk-mark.svg" alt="" aria-hidden="true"></div>
+      <div class="service-hero-copy">
+        <p class="service-veteran">Veteran-owned software <span aria-hidden="true">·</span> Texas</p>
+        <h1 id="services-title">One game to play.<br>Software for <em>your work.</em></h1>
+        <p>Jerbot has two lines: Rug Pulled! is the browser game, and Build your software is project work for clients. I’m based in the Austin area and can work with businesses worldwide.</p>
+        <a class="button button-primary" href="#service-lines">Explore both lines <span aria-hidden="true">↓</span></a>
+      </div>
+      <div class="character-stage service-character"><img src="assets/jerbot-character.svg" alt="Illustrated Rug Pulled! character"><img class="desk-mark" src="assets/jerbot-desk-mark.svg" alt="" aria-hidden="true"></div>
     </section>
-    <section class="service-list" aria-labelledby="build-title"><p class="eyebrow">What Jerbot builds</p><h2 id="build-title">Clear products with real constraints.</h2><div class="service-grid"><article><h3>Product interfaces</h3><p>Interfaces for the decisions people have to make.</p></article><article><h3>Interactive software</h3><p>Software where the rules and the experience have to agree.</p></article><article><h3>Web experiences</h3><p>Browser software and product sites that say what they do.</p></article></div></section>
-    <section class="engagement" aria-labelledby="engagement-title"><p class="eyebrow">Working together</p><h2 id="engagement-title">Direct, practical, and scoped to the work.</h2><p>Tell me what you need it to do. I’ll tell you if it is a fit and what I would start with.</p><a class="contact-email" href="mailto:hello@jerbot.dev?subject=Jerbot%20software%20project">hello@jerbot.dev</a></section>
+
+    <section class="service-lines" id="service-lines" aria-labelledby="lines-title">
+      <p class="eyebrow">Two lines</p><h2 id="lines-title">Play ours. Build yours.</h2>
+      <div class="service-line-grid">
+        <article class="service-line service-line-game" aria-labelledby="game-line-title">
+          <p class="service-line-number">01 · Product</p><h3 id="game-line-title">Rug Pulled!</h3>
+          <p>A fictional strategy game for the browser. Play free during closed beta; no real-money trading.</p>
+          <a class="service-line-link" href="rug-pulled.html">Explore Rug Pulled! <span aria-hidden="true">→</span></a>
+        </article>
+        <article class="service-line service-line-build" aria-labelledby="build-line-title">
+          <p class="service-line-number">02 · Service</p><h3 id="build-line-title">Build your software</h3>
+          <p>Software and automation for the work your business needs to get done. Austin-area projects and remote work worldwide.</p>
+          <a class="service-line-link" href="#packages">See the four packages <span aria-hidden="true">↓</span></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="service-packages" id="packages" aria-labelledby="packages-title">
+      <p class="eyebrow">Build your software</p><h2 id="packages-title">Start with a clear scope.</h2>
+      <p class="service-section-intro">These four starting points are quoted for your project. Prices are not published yet.</p>
+      <div class="service-package-grid">
+        <article><p class="service-package-index">01</p><h3>Launch Sprint</h3><p>A web app or internal tool centered on one useful workflow.</p><a href="mailto:hello@jerbot.dev?subject=Launch%20Sprint%20quote" aria-label="Get a quote for Launch Sprint">Get a quote <span aria-hidden="true">→</span></a></article>
+        <article><p class="service-package-index">02</p><h3>Security and Reliability Review</h3><p>A review of an existing web app’s access controls, backups, recovery, and error handling, with a prioritized fix list.</p><a href="mailto:hello@jerbot.dev?subject=Security%20and%20Reliability%20Review%20quote" aria-label="Get a quote for Security and Reliability Review">Get a quote <span aria-hidden="true">→</span></a></article>
+        <article><p class="service-package-index">03</p><h3>Automation Pilot</h3><p>Explore replacing one repetitive process with an automation that logs its work and keeps a human approval step.</p><a href="mailto:hello@jerbot.dev?subject=Automation%20Pilot%20quote" aria-label="Get a quote for Automation Pilot">Get a quote <span aria-hidden="true">→</span></a></article>
+        <article><p class="service-package-index">04</p><h3>Retainer</h3><p>Maintenance, fixes, and small features with a scope agreed together.</p><a href="mailto:hello@jerbot.dev?subject=Retainer%20quote" aria-label="Get a quote for Retainer">Get a quote <span aria-hidden="true">→</span></a></article>
+      </div>
+    </section>
+
+    <section class="service-next" aria-labelledby="next-title">
+      <p class="eyebrow">Next · proposed</p><h2 id="next-title">Stress Lab</h2>
+      <p>Strategy stress-testing in a simulated market is planned. Stress Lab is not currently available as a Jerbot service.</p>
+    </section>
+    <section class="service-contact" aria-labelledby="contact-title">
+      <p class="eyebrow">Work together</p><h2 id="contact-title">Tell me what you need to build.</h2>
+      <p>For an Austin-area automation project or software work anywhere in the world, email <a href="mailto:hello@jerbot.dev?subject=Jerbot%20software%20project">hello@jerbot.dev</a>.</p>
+    </section>
   </main>
-  <footer><a class="wordmark" href="index.html" aria-label="Jerbot home">JERB<img class="wordmark-o" src="assets/brand/jerbot-mark-wordmark.svg" alt="" aria-hidden="true">T<span>_</span></a><p>© 2026 Jerbot. Texas. · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> &middot; <a href="licenses.html">Licences</a></p></footer>
+  <footer><a class="wordmark" href="index.html" aria-label="Jerbot home">JERB<img class="wordmark-o" src="assets/brand/jerbot-mark-wordmark.svg" alt="" aria-hidden="true">T<span>_</span></a><p>© 2026 Jerbot. Texas. · <a href="privacy.html">Privacy</a> &middot; <a href="licenses.html">Licences</a></p></footer>
 </body>
 </html>
