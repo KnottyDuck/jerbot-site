@@ -1,0 +1,165 @@
+/* About page v2. These rules are intentionally scoped to this page. */
+.about-v2 main {
+  background: var(--ink);
+}
+.about-v2 .about-hero {
+  grid-template-columns: minmax(0, 1.4fr) minmax(270px, .6fr);
+  gap: 56px;
+  padding: 76px 0;
+}
+.about-v2 .about-hero h1 {
+  max-width: 900px;
+  font-size: 62px;
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+.about-v2 .about-hero-copy > p:last-child {
+  max-width: 60ch;
+  margin: 28px 0 0;
+  font-size: 18px;
+  line-height: 1.65;
+}
+.about-v2 .about-portrait {
+  height: 330px;
+}
+.about-v2 .about-portrait > img {
+  max-height: 300px;
+}
+.about-v2 .about-arc,
+.about-v2 .about-skills,
+.about-v2 .credentials,
+.about-v2 .about-contact {
+  padding: 68px 0;
+  border-top: 1px solid var(--line);
+}
+.about-v2 .about-arc h2,
+.about-v2 .about-skills h2,
+.about-v2 .credentials h2,
+.about-v2 .about-contact h2 {
+  max-width: 800px;
+  font-size: 42px;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+.about-v2 .about-timeline {
+  max-width: 1000px;
+  margin-top: 38px;
+  border-bottom: 1px solid var(--line);
+}
+.about-v2 .about-entry {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 32px;
+  padding: 30px 0 36px;
+  border-top: 1px solid var(--line);
+}
+.about-v2 .about-entry-lead {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 14px;
+}
+.about-v2 .about-entry-lead img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+.about-v2 .timeline-date {
+  font-size: 14px;
+  letter-spacing: 0;
+}
+.about-v2 .about-entry h3 {
+  margin: 0 0 12px;
+  font-size: 23px;
+  line-height: 1.25;
+  letter-spacing: 0;
+}
+.about-v2 .about-entry h3 span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 600;
+}
+.about-v2 .about-entry p:not(.timeline-date) {
+  max-width: 75ch;
+  margin: 0 0 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+.about-v2 .about-entry p:last-child {
+  margin-bottom: 0;
+}
+.about-v2 .about-entry a,
+.about-v2 .about-service-link {
+  color: var(--lime);
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+.about-v2 .about-skills {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
+  gap: 64px;
+}
+.about-v2 .about-skills ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom: 1px solid var(--line);
+}
+.about-v2 .about-skills li {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 14px;
+  padding: 15px 0;
+  border-top: 1px solid var(--line);
+}
+.about-v2 .about-skills li span,
+.about-v2 .credentials-grid p {
+  color: var(--muted);
+}
+.about-v2 .credentials-grid article {
+  min-width: 0;
+}
+.about-v2 .about-contact {
+  padding-bottom: 84px;
+}
+.about-v2 .about-contact a {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 800px) {
+  .about-v2 .about-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    padding: 58px 0;
+  }
+  .about-v2 .about-hero h1 { font-size: 48px; }
+  .about-v2 .about-portrait { height: 290px; }
+  .about-v2 .about-arc,
+  .about-v2 .about-skills,
+  .about-v2 .credentials,
+  .about-v2 .about-contact { padding: 56px 0; }
+  .about-v2 .about-skills { grid-template-columns: 1fr; gap: 20px; }
+}
+@media (max-width: 520px) {
+  .about-v2 .about-hero { padding: 42px 0 50px; }
+  .about-v2 .about-hero h1 { font-size: 37px; }
+  .about-v2 .about-hero-copy > p:last-child { font-size: 16px; margin-top: 22px; }
+  .about-v2 .about-portrait { height: 230px; }
+  .about-v2 .about-portrait > img { max-height: 215px; }
+  .about-v2 .about-arc,
+  .about-v2 .about-skills,
+  .about-v2 .credentials,
+  .about-v2 .about-contact { padding: 46px 0; }
+  .about-v2 .about-arc h2,
+  .about-v2 .about-skills h2,
+  .about-v2 .credentials h2,
+  .about-v2 .about-contact h2 { font-size: 30px; }
+  .about-v2 .about-timeline { margin-top: 28px; }
+  .about-v2 .about-entry { grid-template-columns: 1fr; gap: 8px; padding: 25px 0 28px; }
+  .about-v2 .about-entry-lead { flex-direction: row; justify-content: space-between; align-items: center; }
+  .about-v2 .about-entry-lead img { width: 54px; height: 54px; }
+  .about-v2 .about-entry h3 { font-size: 20px; }
+  .about-v2 .about-entry h3 span { font-size: 15px; }
+  .about-v2 .about-skills li { grid-template-columns: 1fr; gap: 3px; }
+}
