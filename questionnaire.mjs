@@ -90,20 +90,24 @@ export function buildMailto(input) {
 if (typeof document !== 'undefined') {
   const form = document.getElementById('project-questionnaire');
   const status = document.getElementById('questionnaire-status');
-  form?.addEventListener('submit', event => {
-    event.preventDefault();
-    if (!form.reportValidity()) return;
-    const data = new FormData(form);
-    const input = Object.fromEntries(data.entries());
-    input.compliance = data.getAll('compliance');
-    const mailto = buildMailto(input);
-    if (mailto.length > MAX_MAILTO_LENGTH) {
-      status.textContent = 'This summary is too long for a reliable email link. Shorten a few answers and try again; nothing has been sent or saved.';
-      return;
-    }
-    status.textContent = 'Your mail app should open a draft. Review and send it there; this page has not sent anything.';
-    const link = document.createElement('a');
-    link.href = mailto;
-    link.click();
-  });
+  const controls = document.getElementById('questionnaire-controls');
+  if (form && status && controls) {
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const data = new FormData(form);
+      const input = Object.fromEntries(data.entries());
+      input.compliance = data.getAll('compliance');
+      const mailto = buildMailto(input);
+      if (mailto.length > MAX_MAILTO_LENGTH) {
+        status.textContent = 'This summary is too long for a reliable email link. Shorten a few answers and try again; nothing has been sent or saved.';
+        return;
+      }
+      status.textContent = 'Your mail app should open a draft. Review and send it there; this page has not sent anything.';
+      const link = document.createElement('a');
+      link.href = mailto;
+      link.click();
+    });
+    controls.disabled = false;
+  }
 }

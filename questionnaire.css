@@ -28,7 +28,10 @@
 .questionnaire-page .questionnaire-privacy strong { color: var(--paper); }
 .questionnaire-page .questionnaire-privacy a,
 .questionnaire-page .questionnaire-finish a { color: var(--lime); font-weight: 700; }
+.questionnaire-page .questionnaire-noscript { max-width: 65ch; color: var(--paper); line-height: 1.6; }
+.questionnaire-page .questionnaire-noscript a { color: var(--lime); }
 .questionnaire-page form { max-width: 920px; padding-bottom: 82px; }
+.questionnaire-page #questionnaire-controls { min-width: 0; margin: 0; padding: 0; border: 0; }
 .questionnaire-page .questionnaire-step {
   min-width: 0;
   margin: 0 0 24px;
@@ -130,6 +133,7 @@
 }
 .questionnaire-page .questionnaire-finish > p:first-child { max-width: 60ch; color: var(--muted); }
 .questionnaire-page .questionnaire-finish button { min-height: 48px; cursor: pointer; }
+.questionnaire-page #questionnaire-controls:disabled .questionnaire-finish button { opacity: .55; cursor: not-allowed; }
 .questionnaire-page #questionnaire-status { max-width: 65ch; min-height: 24px; color: var(--paper); }
 @media (max-width: 800px) {
   .questionnaire-page .questionnaire-intro { padding-top: 56px; }
