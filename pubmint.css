@@ -99,6 +99,14 @@ body.pubmint-page::before { display:none; }
   background:var(--pm-page); color:var(--pm-muted); font-size:14px;
 }
 .pubmint-page a:focus-visible { outline:3px solid var(--pm-accent); outline-offset:4px; }
+/* How it works: 3 cards on desktop, 2 at tablet (the third spans the row), 1 on phones. */
+@media (max-width:1023px) {
+  .pubmint-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pubmint-steps li:last-child { grid-column:1 / -1; }
+}
+@media (max-width:599px) {
+  .pubmint-steps,.pubmint-shots { grid-template-columns:1fr; }
+}
 @media (max-width:700px) {
   .pubmint-header,.pubmint-page main,.pubmint-footer { width:calc(100% - 32px); }
   .pubmint-header { min-height:66px; }
@@ -109,7 +117,7 @@ body.pubmint-page::before { display:none; }
   .pubmint-mark-panel img { width:170px; }
   .pubmint-section { padding:48px 0 55px; }
   .pubmint-section h2 { font-size:31px; }
-  .pubmint-steps,  .pubmint-contact { padding-bottom:60px; }
+  .pubmint-contact { padding-bottom:60px; }
   .pubmint-footer { flex-direction:row; flex-wrap:wrap; gap:8px 12px; }
 }
 @media (forced-colors:active) {
