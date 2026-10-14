@@ -61,13 +61,18 @@ try {
               }
               const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);
               violations.push(...await page.evaluate(() => window.__wishlistCspViolations ?? []));
+              const runtimeErrors = [...errors];
+              const runtimeViolations = [...violations];
               assert.ok(overflow <= 1, `${name} ${width} ${pagePath} overflow ${overflow}`);
-              assert.deepEqual(errors, []);
-              assert.deepEqual(violations, []);
+              assert.deepEqual(runtimeErrors, []);
+              assert.deepEqual(runtimeViolations, []);
               assert.deepEqual(external, []);
               const screenshot = `${name}-${width}x${height}-${theme}-${pagePath === '/' ? 'home' : 'rug-pulled'}-${visible ? 'visible' : 'hidden'}.png`;
               await page.screenshot({ path:join(output, screenshot), fullPage:true, animations:'disabled' });
-              checks.push({ browser:name, viewport:`${width}x${height}`, theme, page:pagePath, visible, overflow, errors, violations, external, screenshot });
+              const screenshotErrors = errors.slice(runtimeErrors.length);
+              const screenshotViolations = (await page.evaluate(() => window.__wishlistCspViolations ?? [])).slice(runtimeViolations.length);
+              checks.push({ browser:name, viewport:`${width}x${height}`, theme, page:pagePath, visible, overflow,
+                runtimeErrors, runtimeViolations, screenshotErrors, screenshotViolations, external, screenshot });
               console.log(`${name} ${width} ${theme} ${pagePath} ${visible ? 'visible' : 'hidden'}: PASS`);
               await context.close();
             }
