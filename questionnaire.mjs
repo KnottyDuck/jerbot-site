@@ -91,22 +91,45 @@ if (typeof document !== 'undefined') {
   const form = document.getElementById('project-questionnaire');
   const status = document.getElementById('questionnaire-status');
   const controls = document.getElementById('questionnaire-controls');
-  if (form && status && controls) {
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
+  const copyButton = document.getElementById('copy-answers');
+  const manualAnswers = document.getElementById('manual-answers');
+  if (form && status && controls && copyButton && manualAnswers) {
+    const summary = () => {
       const data = new FormData(form);
       const input = Object.fromEntries(data.entries());
       input.compliance = data.getAll('compliance');
+      return { input, text:composeSummary(input) };
+    };
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!form.reportValidity()) return;
+      const { input } = summary();
       const mailto = buildMailto(input);
       if (mailto.length > MAX_MAILTO_LENGTH) {
-        status.textContent = 'This summary is too long for a reliable email link. Shorten a few answers and try again; nothing has been sent or saved.';
+        status.textContent = 'This summary is too long for a reliable email link. Use Copy my answers instead; nothing has been sent or saved.';
         return;
       }
-      status.textContent = 'Your mail app should open a draft. Review and send it there; this page has not sent anything.';
+      status.textContent = 'Your mail app should open a draft. If it does not, use Copy my answers. This page has not sent anything.';
       const link = document.createElement('a');
       link.href = mailto;
       link.click();
+    });
+    copyButton.addEventListener('click', async () => {
+      if (!form.reportValidity()) return;
+      const { text } = summary();
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+        await navigator.clipboard.writeText(text);
+        manualAnswers.hidden = true;
+        manualAnswers.value = '';
+        status.textContent = 'Answers copied. Paste them into a message to hello@jerbot.dev; nothing has been sent.';
+      } catch {
+        manualAnswers.value = text;
+        manualAnswers.hidden = false;
+        manualAnswers.focus();
+        manualAnswers.select();
+        status.textContent = 'Clipboard copy was unavailable. Your answers are selected below for manual copying; send them to hello@jerbot.dev.';
+      }
     });
     controls.disabled = false;
   }

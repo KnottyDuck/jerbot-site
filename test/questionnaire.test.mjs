@@ -48,15 +48,21 @@ test('no-script form stays disabled until its bounded submit handler attaches', 
   const html = readFileSync(new URL('../questionnaire.html', import.meta.url), 'utf8');
   assert.match(html, /<fieldset id="questionnaire-controls" disabled>/);
   assert.match(html, /<noscript>.*The form is unavailable right now; email <a href="mailto:hello@jerbot\.dev">/);
+  assert.match(html, /<button type="button" id="copy-answers"/);
+  assert.match(html, /<textarea id="manual-answers" hidden readonly/);
 
   const controls = { disabled:true };
   const calls = [];
   const form = { addEventListener(type, handler) {
     calls.push({ type, handler, disabledAtAttachment:controls.disabled });
   } };
+  const copyButton = { addEventListener(type, handler) {
+    calls.push({ type, handler, disabledAtAttachment:controls.disabled });
+  } };
   const previousDocument = globalThis.document;
   globalThis.document = { getElementById(id) {
-    return { 'project-questionnaire':form, 'questionnaire-status':{}, 'questionnaire-controls':controls }[id];
+    return { 'project-questionnaire':form, 'questionnaire-status':{}, 'questionnaire-controls':controls,
+      'copy-answers':copyButton, 'manual-answers':{} }[id];
   } };
   try {
     await import('../questionnaire.mjs?no-script-gate-test');
@@ -64,9 +70,21 @@ test('no-script form stays disabled until its bounded submit handler attaches', 
     if (previousDocument === undefined) delete globalThis.document;
     else globalThis.document = previousDocument;
   }
-  assert.equal(calls.length, 1);
+  assert.equal(calls.length, 2);
   assert.equal(calls[0].type, 'submit');
+  assert.equal(calls[1].type, 'click');
   assert.equal(calls[0].disabledAtAttachment, true);
   assert.equal(typeof calls[0].handler, 'function');
   assert.equal(controls.disabled, false);
+});
+
+test('approved entry routes and inquiry privacy copy are present', () => {
+  const services = readFileSync(new URL('../services.html', import.meta.url), 'utf8');
+  const home = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+  const privacy = readFileSync(new URL('../privacy.html', import.meta.url), 'utf8');
+  assert.equal((services.match(/href="\/questionnaire"/g) ?? []).length, 5);
+  assert.match(home, /class="home-contact"[\s\S]*href="\/questionnaire"/);
+  assert.doesNotMatch(home.split('</header>')[0], /href="\/questionnaire"/);
+  assert.match(privacy, /If you email me — directly or with the project questionnaire — I keep that email to reply and to manage your project/);
+  assert.match(privacy, /Ask and I'll delete it\./);
 });

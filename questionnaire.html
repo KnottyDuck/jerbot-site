@@ -116,8 +116,11 @@
       </fieldset>
 
       <div class="questionnaire-finish">
-        <p>Choosing Compose email opens your mail app with a summary. Nothing is sent until you review and send it there.</p>
+        <p>Choosing Compose email opens your mail app with a summary. Nothing is sent until you review and send it there. If no draft opens, copy your answers instead.</p>
         <button type="submit" class="button button-primary">Compose email <span aria-hidden="true">→</span></button>
+        <button type="button" id="copy-answers" class="button">Copy my answers</button>
+        <p>Paste the summary into a message to <span class="questionnaire-recipient">hello@jerbot.dev</span>.</p>
+        <textarea id="manual-answers" hidden readonly aria-label="Your answers to copy manually"></textarea>
         <p id="questionnaire-status" role="status" aria-live="polite"></p>
       </div>
         </fieldset>
