@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Jerbot is veteran-made software by a Texas builder with sixteen years in military and enterprise IT.">
+  <meta name="description" content="Meet Jerry, the Texas builder behind Jerbot: an ex-Marine with fifteen-plus years keeping military, healthcare, manufacturing and retail systems running.">
   <link rel="canonical" href="https://jerbot.dev/about.html">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Jerbot">
   <meta property="og:title" content="About — Jerbot">
-  <meta property="og:description" content="Jerbot is veteran-made software by a Texas builder with sixteen years in military and enterprise IT.">
+  <meta property="og:description" content="Meet Jerry, the Texas builder behind Jerbot: an ex-Marine with fifteen-plus years keeping real systems running.">
   <meta property="og:url" content="https://jerbot.dev/about.html">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="About — Jerbot">
-  <meta name="twitter:description" content="Jerbot is veteran-made software by a Texas builder with sixteen years in military and enterprise IT.">
+  <meta name="twitter:description" content="Meet Jerry, the Texas builder behind Jerbot: an ex-Marine with fifteen-plus years keeping real systems running.">
   <title>About — Jerbot</title>
   <script src="/theme.js"></script>
   <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="about.css">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -25,20 +25,57 @@
   <meta property="og:image:height" content="630">
   <meta name="twitter:image" content="https://jerbot.dev/assets/social/jerbot-og.png">
 </head>
-<body>
+<body class="about-v2">
   <a class="skip-link" href="#about">Skip to about</a>
   <header class="site-header"><a class="wordmark" href="index.html" aria-label="Jerbot home">JERB<img class="wordmark-o" src="assets/brand/jerbot-mark-wordmark.svg" alt="" aria-hidden="true">T<span>_</span></a><nav aria-label="Primary navigation"><a href="index.html#products">Products</a><a href="services.html">Services</a><a href="about.html" aria-current="page">About</a><a href="index.html#contact">Contact</a></nav></header>
   <main id="about">
     <section class="about-hero" aria-labelledby="about-title">
-      <div><p class="eyebrow">Veteran-made software · Texas</p><h1 id="about-title">Marine.<br>Systems guy.<br>Now building games <em>that bite.</em></h1><p>I’m Jerry, in Texas. Ex-Marine: flightline IT for more than 4,000 users, then years across HP, Toyota and more. Jerbot (say it “jer-BUT”) is what I build when nobody’s handing me a ticket.</p></div>
-      <div class="about-portrait"><img src="assets/portrait/founder-avatar-house-style.svg" alt="Jerry Taylor, founder of Jerbot"></div>
+      <div class="about-hero-copy">
+        <p class="eyebrow">Veteran-made software · Texas</p>
+        <h1 id="about-title">Ex-Marine.<br>Systems guy.<br>Now building games <em>that bite.</em></h1>
+        <p>I’m Jerry, in Texas. Fifteen-plus years keeping real systems up for real people: military, healthcare, manufacturing, retail. Jerbot (say it “jer-BUT”) is what I build when nobody’s handing me a ticket.</p>
+      </div>
+      <div class="about-portrait"><img src="assets/portrait/founder-avatar-house-style.svg" alt="Illustration of Jerry Taylor, founder of Jerbot"></div>
     </section>
-    <section class="about-arc" aria-labelledby="arc-title"><p class="eyebrow">The work</p><h2 id="arc-title">Service → enterprise → Jerbot</h2><div class="timeline">
-      <article><img src="assets/portrait/timeline-usmc.svg" alt="Jerry in the Marine Corps, high and tight, woodland MARPAT"><p class="timeline-date">2008–2013</p><h3>United States Marine Corps</h3><p>Flightline IT Helpdesk. More than 4,000 users, mission-critical systems, server policy, and a major OS migration run in garrison and in deployed environments.</p></article>
-      <article><img src="assets/portrait/timeline-enterprise.svg" alt="Jerry during his enterprise IT years, locs and a polo"><p class="timeline-date">2014–2026</p><h3>Enterprise IT</h3><p>HP Inc., Energy XXI, Becton Dickinson, Toyota Motor Manufacturing, and Academy Sports & Outdoors, through Cognizant.</p><p class="timeline-detail">At HP, I contributed to operating systems NASA used on Apple and Windows machines. Around 2014, on the NASA ACES contract, NASA leadership asked us to build a tool that could predict and mitigate IT problems on the fly. We laughed. Look where we are now.</p></article>
-      <article><img src="assets/portrait/timeline-founder.svg" alt="Jerry now, founder of Jerbot"><p class="timeline-date">Now</p><h3>Jerbot</h3><p>Almost 20 years of real systems work, pointed at software of my own. Rug Pulled! is playable in a browser: test your skills without testing your wallet. More is on the way.</p></article>
-    </div></section>
-    <section class="credentials" aria-labelledby="credentials-title"><p class="eyebrow">Background</p><h2 id="credentials-title">The details behind the work.</h2><div class="credentials-grid"><article><h3>Current role</h3><p>Founder — Jerbot. Texas.</p></article><article><h3>Military training</h3><p>Tactical Information Specialist, Aviation Information Specialist School (2008).</p></article><article class="veteran-logo-slot"><h3>Veteran-owned verification</h3><p>Texas Veterans Commission verification is in progress.</p><span>Official mark reserved</span></article></div></section>
+
+    <section class="about-arc" aria-labelledby="arc-title">
+      <p class="eyebrow">The work</p>
+      <h2 id="arc-title">From service to software of my own.</h2>
+      <div class="about-timeline">
+        <article class="about-entry">
+          <div class="about-entry-lead"><p class="timeline-date">2008–2013</p><img src="assets/portrait/timeline-usmc.svg" alt="" loading="lazy"></div>
+          <div><h3>United States Marine Corps <span>· Information Systems Specialist</span></h3><p>At Camp Pendleton and Camp Bastion, Afghanistan, I supported 4,000+ users. I ran the help desk, then the customer-service division. I owned SharePoint for the squadron, with 1,000+ permission groups supporting flight-line missions. While deployed, I led the Windows XP to Windows 7 migration of every flight-line asset.</p><p>I managed a classified network for 2,000+ users and kept databases tracking $30M+ in equipment and 100,000+ flight and man-hours. I repaired $200,000+ in government gear, saving the unit over $1M in replacements, and trained 30+ people on new systems.</p></div>
+        </article>
+        <article class="about-entry">
+          <div class="about-entry-lead"><p class="timeline-date">2014</p><img src="assets/portrait/timeline-enterprise.svg" alt="" loading="lazy"></div>
+          <div><h3>HP <span>· ACES engineering team supporting NASA</span></h3><p>I wrote the engineering documents field technicians used to fix problems, tested 30+ HP models, and contributed to the operating-system standard NASA ran on Apple and Windows machines.</p><p>Around 2014, on the NASA ACES contract, NASA leadership asked us to build a tool that could predict and mitigate IT problems on the fly. We laughed. Look where we are now.</p></div>
+        </article>
+        <article class="about-entry"><div class="about-entry-lead"><p class="timeline-date">2015–2017</p></div><div><h3>Energy XXI <span>· through Genesis Networks</span></h3><p>I worked as a remote dispatcher for several client companies, then was hired on as a desktop analyst and IT consultant in Houston.</p></div></article>
+        <article class="about-entry"><div class="about-entry-lead"><p class="timeline-date">2018–2021</p></div><div><h3>Becton Dickinson <span>· Pyxis medication systems</span></h3><p>I kept hospital medication cabinets running remotely across the US, Alaska, Canada and South America. I rebuilt live databases and schemas under HIPAA, on patient-critical clocks, and led facility relocations and consolidations.</p></div></article>
+        <article class="about-entry"><div class="about-entry-lead"><p class="timeline-date">2021–2022</p></div><div><h3>Toyota Motor Manufacturing <span>· L3 network administrator</span></h3><p>Cisco switching and routing, VLANs, network cabinets, and Tier 2 support for field technicians.</p></div></article>
+        <article class="about-entry"><div class="about-entry-lead"><p class="timeline-date">2022–2024</p></div><div><h3>Academy Sports + Outdoors <span>· desktop engineer and technical lead</span></h3><p>I wrote the operating procedures, ran large expansion and maintenance projects, and handled the hard tickets.</p></div></article>
+        <article class="about-entry"><div class="about-entry-lead"><p class="timeline-date">Now</p><img src="assets/portrait/timeline-founder.svg" alt="" loading="lazy"></div><div><h3>Jerbot</h3><p>Software of my own: <a href="rug-pulled.html">Rug Pulled!</a>, playable in a browser, and tools for small businesses who want their busywork automated. The same discipline from 15 years of IT runs the shop: written procedures, change control, evidence before “done.”</p></div></article>
+      </div>
+    </section>
+
+    <section class="about-skills" aria-labelledby="skills-title">
+      <div><p class="eyebrow">What I bring to your project</p><h2 id="skills-title">Hands-on systems work, from the network to the product.</h2><p><a class="about-service-link" href="services.html">See Jerbot services →</a></p></div>
+      <ul>
+        <li><strong>Systems</strong><span>Windows/macOS/Linux, Active Directory/Entra ID, Intune, VMware</span></li>
+        <li><strong>Networks</strong><span>TCP/IP, Cisco, remote support at scale</span></li>
+        <li><strong>Databases</strong><span>SQL Server, schema rebuilds, reporting</span></li>
+        <li><strong>Process</strong><span>SOPs, ITSM, Lean Six Sigma, training people on new systems</span></li>
+        <li><strong>Product</strong><span>Requirements, pricing models, risk-aware architecture</span></li>
+      </ul>
+    </section>
+
+    <section class="credentials" aria-labelledby="credentials-title">
+      <p class="eyebrow">Background</p><h2 id="credentials-title">Training behind the work.</h2>
+      <div class="credentials-grid">
+        <article><h3>Military training</h3><p>Information Technology Specialist course at the Navy Supply Corps School, Athens, Georgia (2009; the school has since closed under BRAC). SharePoint Advanced Site Owner, USMC Integrated Systems Training Center (2012).</p></article>
+        <article class="veteran-logo-slot"><h3>Veteran-owned verification</h3><p>Verification is in progress.</p><span>Official mark reserved</span></article>
+      </div>
+    </section>
     <section class="about-contact"><p class="eyebrow">Contact</p><h2>Want to talk about software?</h2><p>For product feedback or a project conversation, write to <a href="mailto:hello@jerbot.dev">hello@jerbot.dev</a>.</p></section>
   </main>
   <footer><a class="wordmark" href="index.html" aria-label="Jerbot home">JERB<img class="wordmark-o" src="assets/brand/jerbot-mark-wordmark.svg" alt="" aria-hidden="true">T<span>_</span></a><p>© 2026 Jerbot. Texas. · <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p></footer>
