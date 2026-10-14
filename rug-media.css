@@ -1,0 +1,71 @@
+/* Rug Pulled! product-page media only. Native captures retain their full 16:9 frame. */
+.rp-media-sequence {
+  position: relative;
+  left: 50%;
+  width: min(1100px, calc(100vw - 32px));
+  margin: 2rem 0 3rem;
+  transform: translateX(-50%);
+}
+.rp-reel, .rp-capture-grid figure {
+  margin: 0;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: var(--panel);
+  overflow: hidden;
+}
+.rp-reel video, .rp-capture-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--ink);
+  object-fit: contain;
+}
+.rp-reel figcaption, .rp-capture-grid figcaption {
+  padding: 10px 14px;
+  color: var(--paper);
+  font-size: 14px;
+  font-weight: 700;
+}
+.rp-reel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 0 14px 14px;
+}
+.rp-reel-actions button {
+  min-width: 120px;
+  min-height: 44px;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--ink);
+  color: var(--paper);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.rp-reel-actions button:hover { border-color: var(--lime); }
+.rp-reel-actions button:focus-visible, .rp-reel-actions a:focus-visible, .rp-capture-grid a:focus-visible {
+  outline: 3px solid var(--lime);
+  outline-offset: 3px;
+}
+.rp-reel-actions a { min-height: 44px; display: inline-flex; align-items: center; }
+.rp-capture-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+.rp-capture-grid a { display: block; }
+@media (max-width: 700px) {
+  .rp-capture-grid { grid-template-columns: 1fr; gap: 12px; }
+  .rp-reel figcaption, .rp-capture-grid figcaption { padding: 9px 12px; }
+}
+@media (prefers-contrast: more) {
+  .rp-reel, .rp-capture-grid figure { border-color: var(--paper); }
+}
+@media (forced-colors: active) {
+  .rp-reel, .rp-capture-grid figure, .rp-reel-actions button { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}
