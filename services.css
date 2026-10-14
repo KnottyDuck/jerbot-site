@@ -148,6 +148,7 @@
   border-left: 4px solid var(--line);
 }
 .services-v2 .service-contact { padding-bottom: 84px; }
+.services-v2 .service-next a,
 .services-v2 .service-contact a { color: var(--lime); font-weight: 800; overflow-wrap: anywhere; }
 @media (max-width: 800px) {
   .services-v2 .service-hero { grid-template-columns: 1fr; gap: 34px; padding: 58px 0; }
