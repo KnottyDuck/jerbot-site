@@ -1,0 +1,128 @@
+/* Page-only tokens. The OS and PR #17's data-theme choice use the same states. */
+:root {
+  --pm-page:#f5f6ef; --pm-panel:#fff; --pm-hero:#eee9dc;
+  --pm-text:#172119; --pm-muted:#505c52; --pm-line:#74806d;
+  --pm-accent:#426800; --pm-accent-text:#f8ffe9;
+  --pm-mark:#e5ece4; --pm-media:#e4ede6;
+}
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme]) {
+    --pm-page:#090d0c; --pm-panel:#101714; --pm-hero:#19231e;
+    --pm-text:#ecf0ea; --pm-muted:#abb8af; --pm-line:#607268;
+    --pm-accent:#b7ff3c; --pm-accent-text:#172100;
+    --pm-mark:#e5ece4; --pm-media:#14231c;
+  }
+}
+:root[data-theme="dark"] {
+  --pm-page:#090d0c; --pm-panel:#101714; --pm-hero:#19231e;
+  --pm-text:#ecf0ea; --pm-muted:#abb8af; --pm-line:#607268;
+  --pm-accent:#b7ff3c; --pm-accent-text:#172100;
+  --pm-mark:#e5ece4; --pm-media:#14231c;
+}
+body.pubmint-page {
+  --ink:var(--pm-page); --panel:var(--pm-panel); --paper:var(--pm-text);
+  --muted:var(--pm-muted); --line:var(--pm-line); --lime:var(--pm-accent);
+  color-scheme:light; background:var(--pm-page); color:var(--pm-text);
+}
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme]) body.pubmint-page { color-scheme:dark; }
+}
+:root[data-theme="dark"] body.pubmint-page { color-scheme:dark; }
+body.pubmint-page::before { display:none; }
+.pubmint-header,.pubmint-page main,.pubmint-footer { width:min(calc(100% - 48px),1120px); margin-inline:auto; }
+.pubmint-header {
+  min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:20px;
+  border-bottom:1px solid var(--pm-line); background:var(--pm-page);
+}
+.pubmint-header .wordmark { display:inline-flex; align-items:center; min-height:44px; }
+.pubmint-header>a:last-child,.pubmint-footer a {
+  display:inline-flex; align-items:center; min-height:44px;
+  color:var(--pm-text); font-weight:700; text-underline-offset:4px;
+}
+.pubmint-page main { background:var(--pm-page); }
+.pubmint-hero {
+  display:grid; grid-template-columns:minmax(0,1.35fr) minmax(240px,.65fr);
+  align-items:center; gap:48px; padding:72px 0 80px;
+}
+.pubmint-status,.pubmint-kicker,.pubmint-edition-label {
+  margin:0 0 16px; color:var(--pm-accent); font-size:13px;
+  font-weight:800; text-transform:uppercase; letter-spacing:.06em;
+}
+.pubmint-hero h1 { margin:0 0 20px; font-size:68px; line-height:1.03; letter-spacing:0; }
+.pubmint-lede { margin:0 0 16px; max-width:28ch; font-size:26px; font-weight:700; line-height:1.24; }
+.pubmint-hero-copy>p:not(.pubmint-status):not(.pubmint-lede) {
+  max-width:58ch; color:var(--pm-muted); font-size:17px;
+}
+.pubmint-mark-panel {
+  display:flex; align-items:center; justify-content:center; min-height:320px;
+  padding:36px; border:1px solid var(--pm-line); border-radius:7px;
+  background:var(--pm-mark);
+}
+.pubmint-mark-panel img { display:block; width:min(100%,240px); height:auto; }
+.pubmint-section { padding:65px 0 72px; border-top:1px solid var(--pm-line); background:var(--pm-page); }
+.pubmint-section h2 { margin:0 0 16px; font-size:38px; line-height:1.12; letter-spacing:0; }
+.pubmint-section-intro { margin:0 0 30px; color:var(--pm-muted); font-size:17px; }
+.pubmint-steps { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:0; padding:0; list-style:none; }
+.pubmint-steps li {
+  min-width:0; padding:24px; border:1px solid var(--pm-line);
+  border-radius:7px; background:var(--pm-panel);
+}
+.pubmint-step-number { color:var(--pm-accent); font-size:14px; font-weight:900; }
+.pubmint-steps h3 { margin:12px 0 10px; font-size:23px; }
+.pubmint-steps p { margin:0; color:var(--pm-muted); font-size:16px; }
+.pubmint-status-note {
+  margin-top:30px; padding:24px; border:1px solid var(--pm-line); border-left:4px solid var(--pm-accent);
+  border-radius:7px; background:var(--pm-panel);
+}
+.pubmint-status-note .pubmint-edition-label { margin:0; }
+.pubmint-status-note p:last-child { max-width:70ch; margin:10px 0 0; font-size:17px; }
+.pubmint-shots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 20px; margin-top:30px; }
+.pubmint-shots figure { min-width:0; margin:0; }
+.pubmint-shots figure:first-child { grid-column:1 / -1; }
+.pubmint-shots img { display:block; width:100%; height:auto; border:1px solid var(--pm-line); border-radius:7px; }
+.pubmint-shots figcaption { margin-top:10px; color:var(--pm-muted); font-size:15px; font-weight:700; }
+/* Screens follow the page theme: the OS setting, or PR #17's data-theme choice. */
+.pubmint-shot-dark { display:none !important; }
+@media (prefers-color-scheme:dark) {
+  :root:not([data-theme]) .pubmint-shot-light { display:none !important; }
+  :root:not([data-theme]) .pubmint-shot-dark { display:block !important; }
+}
+:root[data-theme="dark"] .pubmint-shot-light { display:none !important; }
+:root[data-theme="dark"] .pubmint-shot-dark { display:block !important; }
+.pubmint-contact { padding-bottom:82px; }
+.pubmint-contact p { max-width:60ch; color:var(--pm-muted); font-size:17px; }
+.pubmint-contact .pubmint-footnote { font-size:14px; }
+.pubmint-contact a { color:var(--pm-accent); font-weight:800; text-underline-offset:4px; }
+.pubmint-footer {
+  display:flex; justify-content:center; align-items:center; gap:12px;
+  padding:22px 0 35px; border-top:1px solid var(--pm-line);
+  background:var(--pm-page); color:var(--pm-muted); font-size:14px;
+}
+.pubmint-page a:focus-visible { outline:3px solid var(--pm-accent); outline-offset:4px; }
+/* How it works: 3 cards on desktop, 2 at tablet (the third spans the row), 1 on phones. */
+@media (max-width:1023px) {
+  .pubmint-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .pubmint-steps li:last-child { grid-column:1 / -1; }
+}
+@media (max-width:599px) {
+  .pubmint-steps,.pubmint-shots { grid-template-columns:1fr; }
+}
+@media (max-width:700px) {
+  .pubmint-header,.pubmint-page main,.pubmint-footer { width:calc(100% - 32px); }
+  .pubmint-header { min-height:66px; }
+  .pubmint-hero { grid-template-columns:1fr; gap:28px; padding:44px 0 54px; }
+  .pubmint-hero h1 { font-size:48px; }
+  .pubmint-lede { font-size:22px; }
+  .pubmint-mark-panel { min-height:220px; padding:22px; }
+  .pubmint-mark-panel img { width:170px; }
+  .pubmint-section { padding:48px 0 55px; }
+  .pubmint-section h2 { font-size:31px; }
+  .pubmint-contact { padding-bottom:60px; }
+  .pubmint-footer { flex-direction:row; flex-wrap:wrap; gap:8px 12px; }
+}
+@media (forced-colors:active) {
+  body.pubmint-page,.pubmint-header,.pubmint-page main,.pubmint-section,.pubmint-footer,
+  .pubmint-steps li,.pubmint-status-note,.pubmint-mark-panel {
+    background:Canvas; color:CanvasText; border-color:CanvasText;
+  }
+  }
