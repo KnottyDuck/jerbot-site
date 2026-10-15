@@ -131,6 +131,7 @@ body.home::before { display: var(--texture-overlay); }
 .home-card-copy { min-width: 0; }
 .home-card h3 { margin: 0 0 18px; font-size: 42px; line-height: 1.08; letter-spacing: 0; }
 .home-card p { max-width: 35ch; margin: 0 0 22px; color: var(--paper); font-size: 17px; line-height: 1.53; }
+.home-card .card-tagline { margin-top: -7px; margin-bottom: 14px; font-size: 19px; font-weight: 700; line-height: 1.35; }
 .home-card .product-meta { margin: 17px 0 0; color: var(--muted); font-size: 14px; }
 .product-mark { width: 70px; height: 70px; margin-bottom: 18px; object-fit: contain; }
 .product-status {
