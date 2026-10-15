@@ -76,11 +76,9 @@ body.pubmint-page::before { display:none; }
 }
 .pubmint-status-note .pubmint-edition-label { margin:0; }
 .pubmint-status-note p:last-child { max-width:70ch; margin:10px 0 0; font-size:17px; }
-.pubmint-shots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:28px 20px; margin-top:30px; }
-.pubmint-shots figure { min-width:0; margin:0; }
-.pubmint-shots figure:first-child { grid-column:1 / -1; }
-.pubmint-shots img { display:block; width:100%; height:auto; border:1px solid var(--pm-line); border-radius:7px; }
-.pubmint-shots figcaption { margin-top:10px; color:var(--pm-muted); font-size:15px; font-weight:700; }
+.pubmint-page .site-carousel .screen-track figure { flex-basis:min(100%,860px); }
+.pubmint-page .site-carousel .screen-track img { height:auto; aspect-ratio:8/5; border:1px solid var(--pm-line); }
+.pubmint-page .site-carousel .screen-track figcaption { color:var(--pm-muted); }
 /* Screens follow the page theme: the OS setting, or PR #17's data-theme choice. */
 .pubmint-shot-dark { display:none !important; }
 @media (prefers-color-scheme:dark) {
@@ -105,7 +103,8 @@ body.pubmint-page::before { display:none; }
   .pubmint-steps li:last-child { grid-column:1 / -1; }
 }
 @media (max-width:599px) {
-  .pubmint-steps,.pubmint-shots { grid-template-columns:1fr; }
+  .pubmint-steps { grid-template-columns:1fr; }
+  .pubmint-page .site-carousel .screen-track figure { flex-basis:min(88vw,520px); }
 }
 @media (max-width:700px) {
   .pubmint-header,.pubmint-page main,.pubmint-footer { width:calc(100% - 32px); }

@@ -1,0 +1,41 @@
+.site-carousel .carousel-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.site-carousel .carousel-controls { display: flex; gap: 8px; }
+.site-carousel .carousel-controls[hidden], .site-carousel .carousel-dots[hidden] { display: none; }
+.site-carousel button {
+  min-width: 44px; min-height: 44px; padding: 8px 12px;
+  border: 1px solid var(--line); border-radius: 5px;
+  background: var(--panel); color: var(--paper); font: inherit; cursor: pointer;
+}
+.site-carousel button:hover { border-color: var(--lime); }
+.site-carousel button:focus-visible, .site-carousel .screen-track:focus-visible,
+.site-carousel .screen-track a:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+.site-carousel .screen-track {
+  display: flex; gap: 16px; overflow-x: auto; overflow-y: hidden;
+  padding-bottom: 6px; scroll-snap-type: x mandatory;
+  scrollbar-width: thin; scrollbar-color: var(--line) var(--ink);
+}
+.site-carousel .screen-track figure {
+  flex: 0 0 min(100%, 525px); min-width: 0; margin: 0; padding: 10px;
+  border: 1px solid var(--line); border-radius: 7px;
+  background: var(--panel); scroll-snap-align: start;
+}
+.site-carousel .screen-track a { display: block; }
+.site-carousel .screen-track img {
+  display: block; width: 100%; height: 355px; border: 0;
+  border-radius: 4px; background: var(--ink); object-fit: contain;
+}
+.site-carousel .screen-track figcaption { padding: 10px 4px 2px; color: var(--paper); font-size: 15px; font-weight: 700; }
+.site-carousel .carousel-dots { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+.site-carousel .carousel-dots button { min-width: 44px; min-height: 44px; padding: 2px 8px; font-size: 14px; }
+.site-carousel .carousel-dots [aria-current="true"] { border-color: var(--lime); background: var(--lime); color: var(--lime-ink); }
+@media (max-width: 700px) {
+  .site-carousel .carousel-heading { flex-wrap: wrap; }
+  .site-carousel .screen-track { gap: 12px; }
+  .site-carousel .screen-track figure { flex-basis: min(88vw, 355px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-carousel .screen-track { scroll-behavior: auto; }
+}
+@media (forced-colors: active) {
+  .site-carousel button, .site-carousel .screen-track figure { background: Canvas; color: CanvasText; border-color: CanvasText; }
+}

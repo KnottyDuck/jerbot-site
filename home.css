@@ -90,60 +90,16 @@ body.home::before { display: var(--texture-overlay); }
 .cast-hero h1 span { color: var(--lime); }
 .tagline { margin: 0; color: var(--paper); font-size: 24px; font-weight: 600; }
 
-/* One local carousel. Whole images remain visible inside larger frames. */
+/* Home carousel uses the shared controls; whole images remain visible. */
 .marquee {
   padding: 35px max(24px, calc((100% - 1320px)/2)) 42px;
   border-block: 1px solid var(--line);
   background: var(--home-band-soft);
 }
-.marquee-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
 .marquee h2 { margin: 0; color: var(--paper); font-size: 20px; font-weight: 800; text-transform: none; letter-spacing: 0; }
-.carousel-controls { display: flex; gap: 8px; }
-.home button {
-  min-width: 44px;
-  min-height: 44px;
-  padding: 8px 12px;
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  background: var(--home-control);
-  color: var(--paper);
-  font: inherit;
-  cursor: pointer;
-}
-.home button:hover { border-color: var(--lime); }
-.screen-track {
-  display: flex;
-  gap: 16px;
-  overflow: auto;
-  padding-bottom: 6px;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: var(--line) var(--ink);
-}
-.screen-track figure {
-  flex: 0 0 525px;
-  margin: 0;
-  padding: 10px;
-  border: 1px solid var(--line);
-  border-radius: 7px;
-  background: var(--home-card);
-  scroll-snap-align: start;
-}
-.screen-track figure:nth-child(odd) { flex-basis: 380px; }
-.screen-track a { display: block; }
-.screen-track img {
-  display: block;
-  width: 100%;
-  height: 355px;
-  border: 0;
-  border-radius: 4px;
-  background: var(--ink);
-  object-fit: contain;
-}
-.screen-track figcaption { padding: 10px 4px 2px; color: var(--paper); font-size: 15px; font-weight: 700; }
-.carousel-dots { display: flex; justify-content: center; gap: 10px; margin-top: 16px; }
-.home .carousel-dots button { min-width: 44px; min-height: 44px; padding: 2px 8px; font-size: 14px; }
-.carousel-dots [aria-current="true"] { border-color: var(--lime); background: var(--lime); color: var(--lime-ink); }
+.home .site-carousel button { background: var(--home-control); }
+.home .site-carousel .screen-track figure { background: var(--home-card); }
+.home .site-carousel .screen-track figure:nth-child(odd) { flex-basis: 380px; }
 
 /* The approved product order remains four full-width rows. */
 .home-products { padding: 68px 24px 76px; background: var(--home-band); }
@@ -203,6 +159,8 @@ body.home::before { display: var(--texture-overlay); }
 }
 .card-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
 .pubmint-art img { width: 56%; max-width: 250px; height: auto; }
+.stresslab-art { flex-direction: column; align-items: stretch; gap: 11px; padding: 30px; }
+.stresslab-art span { display: block; width: 100%; padding: 8px 0; border-top: 2px solid var(--lime); color: var(--paper); font-size: 30px; font-weight: 800; letter-spacing: 0; line-height: 1.1; }
 .home .detail-link { display: block; width: fit-content; margin-top: 17px; color: var(--paper); font-size: 15px; font-weight: 700; text-underline-offset: 4px; }
 .home .detail-link:hover { color: var(--lime); }
 #rug-pulled {
@@ -220,6 +178,7 @@ body.home::before { display: var(--texture-overlay); }
 #avoiding-jayms { --card-accent: color-mix(in srgb, var(--lime) 55%, var(--paper)); }
 #rug-pulled-live { --card-accent: color-mix(in srgb, var(--lime) 35%, var(--paper)); }
 #pubmint { --card-accent: color-mix(in srgb, var(--lime) 20%, var(--paper)); }
+#stresslab { --card-accent: var(--lime); }
 .edge { display: none; position: absolute; top: 50%; width: 145px; max-height: 285px; object-fit: contain; transform: translateY(-50%); pointer-events: none; }
 .edge-left { left: 0; }
 .edge-right { right: 0; }
@@ -278,17 +237,16 @@ body.home::before { display: var(--texture-overlay); }
   .cast-hero h1 { margin: 4px 0 9px; font-size: 52px; }
   .tagline { max-width: 320px; margin: auto; font-size: 19px; line-height: 1.35; }
   .marquee { padding: 26px 16px 31px; }
-  .marquee-heading { flex-wrap: wrap; }
   .marquee h2 { font-size: 18px; }
-  .screen-track { gap: 12px; }
-  .screen-track figure, .screen-track figure:nth-child(odd) { flex-basis: min(88vw, 355px); }
-  .screen-track img { height: 355px; }
+  .home .site-carousel .screen-track figure:nth-child(odd) { flex-basis: min(88vw, 355px); }
   .home-products { padding: 46px 16px 54px; }
   .home .band-title { margin-bottom: 24px; }
   .product-row { margin-bottom: 22px; }
   .home-card { grid-template-columns: 1fr; gap: 18px; min-height: 0; padding: 24px; }
   .home-card h3 { margin-bottom: 14px; font-size: 32px; }
   .home-card p { margin-bottom: 13px; font-size: 16px; line-height: 1.5; }
+  .stresslab-art { gap: 6px; padding: 18px; }
+  .stresslab-art span { font-size: 22px; }
   .product-mark { width: 58px; height: 58px; margin-bottom: 15px; }
   .card-art { grid-row: auto; min-height: 0; height: auto; }
   #rug-pulled { grid-template-areas: "copy" "art" "actions"; grid-template-rows: auto; min-height: 0; }

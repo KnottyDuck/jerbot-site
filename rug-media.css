@@ -52,15 +52,13 @@
   outline-offset: 3px;
 }
 .rp-reel-actions a { min-height: 44px; display: inline-flex; align-items: center; }
-.rp-capture-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 16px;
-}
+.rp-captures { margin-top: 20px; }
+.rp-captures h2 { margin: 0; font-size: 20px; }
+.rp-captures .screen-track figure { flex-basis: min(100%, 860px); }
+.rp-captures .screen-track img { height: auto; aspect-ratio: 16 / 9; }
 .rp-capture-grid a { display: block; }
 @media (max-width: 700px) {
-  .rp-capture-grid { grid-template-columns: 1fr; gap: 12px; }
+  .rp-captures .screen-track figure { flex-basis: min(88vw, 520px); }
   .rp-reel figcaption, .rp-capture-grid figcaption { padding: 9px 12px; }
 }
 @media (prefers-contrast: more) {
