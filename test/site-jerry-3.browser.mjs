@@ -96,6 +96,7 @@ try {
             assert.deepEqual(runtimeErrors, []);
             assert.deepEqual(runtimeViolations, []);
             assert.deepEqual(external, []);
+            await page.evaluate(() => window.scrollTo(0, 0));
             const screenshot = `${browserName}-${width}x${height}-${theme}-${entry.label}.png`;
             await page.screenshot({ path:join(output, screenshot), fullPage:true, animations:'disabled' });
             checks.push({ browser:browserName, viewport:`${width}x${height}`, theme, page:entry.path, slides:entry.count,
