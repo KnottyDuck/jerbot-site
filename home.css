@@ -158,7 +158,14 @@ body.home::before { display: var(--texture-overlay); }
   background: var(--ink);
 }
 .card-art img { display: block; width: 100%; height: 100%; object-fit: contain; }
-.pubmint-art img { width: 56%; max-width: 250px; height: auto; }
+.pubmint-art img { width: 100%; height: auto; aspect-ratio: 8/5; object-fit: contain; }
+.pubmint-art .pubmint-shot-dark { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .pubmint-art .pubmint-shot-light { display: none; }
+  :root:not([data-theme]) .pubmint-art .pubmint-shot-dark { display: block; }
+}
+:root[data-theme="dark"] .pubmint-art .pubmint-shot-light { display: none; }
+:root[data-theme="dark"] .pubmint-art .pubmint-shot-dark { display: block; }
 .stresslab-art { flex-direction: column; align-items: stretch; gap: 11px; padding: 30px; }
 .stresslab-art span { display: block; width: 100%; padding: 8px 0; border-top: 2px solid var(--lime); color: var(--paper); font-size: 30px; font-weight: 800; letter-spacing: 0; line-height: 1.1; }
 .home .detail-link { display: block; width: fit-content; margin-top: 17px; color: var(--paper); font-size: 15px; font-weight: 700; text-underline-offset: 4px; }

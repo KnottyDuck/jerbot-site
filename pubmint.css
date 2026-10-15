@@ -70,6 +70,12 @@ body.pubmint-page::before { display:none; }
 .pubmint-step-number { color:var(--pm-accent); font-size:14px; font-weight:900; }
 .pubmint-steps h3 { margin:12px 0 10px; font-size:23px; }
 .pubmint-steps p { margin:0; color:var(--pm-muted); font-size:16px; }
+.pubmint-features-heading { margin:28px 0 14px; font-size:23px; line-height:1.25; }
+.pubmint-features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin:0; padding:0; list-style:none; }
+.pubmint-features li { min-width:0; padding:24px; border:1px solid var(--pm-line); border-radius:7px; background:var(--pm-panel); }
+.pubmint-features h4 { margin:0 0 10px; font-size:19px; line-height:1.25; }
+.pubmint-features p { margin:0; color:var(--pm-muted); font-size:16px; }
+.pubmint-features-note { margin:22px 0 0; color:var(--pm-muted); font-size:14px; }
 .pubmint-status-note {
   margin-top:30px; padding:24px; border:1px solid var(--pm-line); border-left:4px solid var(--pm-accent);
   border-radius:7px; background:var(--pm-panel);
@@ -101,9 +107,11 @@ body.pubmint-page::before { display:none; }
 @media (max-width:1023px) {
   .pubmint-steps { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .pubmint-steps li:last-child { grid-column:1 / -1; }
+  .pubmint-features { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
 @media (max-width:599px) {
   .pubmint-steps { grid-template-columns:1fr; }
+  .pubmint-features { grid-template-columns:1fr; }
   .pubmint-page .site-carousel .screen-track figure { flex-basis:min(88vw,520px); }
 }
 @media (max-width:700px) {

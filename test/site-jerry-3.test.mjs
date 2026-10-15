@@ -23,7 +23,7 @@ test('product screenshots preserve their original captions and keep the reel sep
   const [rug, pubmint] = await Promise.all([html('rug-pulled.html'), html('pubmint.html')]);
   assert.ok(rug.indexOf('class="rp-reel"') < rug.indexOf('class="rp-captures site-carousel"'));
   assert.deepEqual([...rug.matchAll(/<figcaption>([^<]+)<\/figcaption>/g)].map(match => match[1]),
-    ['Trading desk', 'Position open', 'Morning review', 'Day recap', 'Notebook Prices', 'Notebook Fills']);
+    ['Trading screen', 'Position open', 'Morning review', 'Day recap', 'Notebook Prices', 'Notebook Fills']);
   assert.deepEqual([...pubmint.matchAll(/<figcaption>([^<]+)<\/figcaption>/g)].map(match => match[1]),
     ['Overview', 'Design your token', 'Review before you sign', 'Token dashboard', 'Owner console']);
   for (const page of [rug, pubmint]) {
