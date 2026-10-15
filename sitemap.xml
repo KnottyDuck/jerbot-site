@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://jerbot.dev/</loc></url>
-  <url><loc>https://jerbot.dev/rug-pulled.html</loc></url>
-  <url><loc>https://jerbot.dev/services.html</loc></url>
-  <url><loc>https://jerbot.dev/about.html</loc></url>
-  <url><loc>https://jerbot.dev/terms.html</loc></url>
+  <url><loc>https://jerbot.dev/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://jerbot.dev/rug-pulled</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/pubmint</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/stresslab</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/rug-pulled-live</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/services</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/about</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/questionnaire</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/privacy</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/terms</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/security</loc><lastmod>2026-10-15</lastmod></url>
+  <url><loc>https://jerbot.dev/licenses</loc><lastmod>2026-10-15</lastmod></url>
 </urlset>
