@@ -25,7 +25,7 @@ await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
 const base = `http://127.0.0.1:${server.address().port}`;
 const paths = [
   { path:'/', label:'home', selector:'.marquee', count:4 },
-  { path:'/rug-pulled.html', label:'rug-pulled', selector:'.rp-captures', count:6 },
+  { path:'/rug-pulled.html', label:'rug-pulled', selector:'.rp-captures', count:7 },
   { path:'/pubmint.html', label:'pubmint', selector:'.pubmint-section.site-carousel', count:5 },
 ];
 const checks = [];

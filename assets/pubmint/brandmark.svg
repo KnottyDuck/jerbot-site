@@ -1,6 +1,3 @@
-<svg width="256" height="256" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
-  <polygon points="128,12 230,74 230,182 128,244 26,182 26,74"
-           fill="#4A6CF7" stroke="#F5A623" stroke-width="8"/>
-  <path d="M128 70 C90 110, 90 170, 128 210 C166 170, 166 110, 128 70 Z"
-        fill="#2EC4B6"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-labelledby="title desc"><title id="title">PubMint — Community seal</title><desc id="desc">Community seal: three connected people inside a seal, within a blue hexagon and orange border.</desc><polygon points="128,12 230,74 230,182 128,244 26,182 26,74" fill="#4A6CF7" stroke="#F5A623" stroke-width="8" />
+  <g id="community-seal"><polygon points="128.000,65.000 142.494,73.908 159.500,73.440 167.598,88.402 182.560,96.500 182.092,113.506 191.000,128.000 182.092,142.494 182.560,159.500 167.598,167.598 159.500,182.560 142.494,182.092 128.000,191.000 113.506,182.092 96.500,182.560 88.402,167.598 73.440,159.500 73.908,142.494 65.000,128.000 73.908,113.506 73.440,96.500 88.402,88.402 96.500,73.440 113.506,73.908" fill="#FFF4DC"/><circle cx="128" cy="128" r="44" fill="#4A6CF7"/><path d="M109 116 147 116 128 149Z" fill="none" stroke="#F5A623" stroke-width="13" stroke-linejoin="round"/><circle cx="109" cy="116" r="12" fill="#FFF4DC"/><circle cx="147" cy="116" r="12" fill="#FFF4DC"/><circle cx="128" cy="149" r="12" fill="#FFF4DC"/></g></svg>
+
