@@ -16,8 +16,9 @@ const server = createServer(async (request, response) => {
   const file = resolve(root, `.${decodeURIComponent(pathname === '/' ? '/index.html' : pathname)}`);
   if (!file.startsWith(root + sep)) { response.writeHead(403).end(); return; }
   try {
+    const bytes = await readFile(file);
     response.writeHead(200, { 'Content-Type': types[extname(file)] ?? 'application/octet-stream',
-      'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'" }).end(await readFile(file));
+      'Content-Security-Policy': "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; frame-src 'none'" }).end(request.method === 'HEAD' ? undefined : bytes);
   } catch { response.writeHead(404).end(); }
 });
 await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
@@ -50,6 +51,7 @@ try {
             }, theme);
             await page.goto(base + entry.path);
             await page.waitForLoadState('networkidle');
+            if (entry.label === 'home') await page.reload({ waitUntil:'networkidle' });
             assert.equal(await page.evaluate(() => document.documentElement.dataset.theme), theme);
             const carousel = page.locator(entry.selector);
             const track = carousel.locator('.screen-track');
@@ -79,7 +81,10 @@ try {
             for (const figure of await carousel.locator('figure').all()) {
               await figure.scrollIntoViewIfNeeded();
               const images = await figure.locator('img:visible').all();
-              for (const img of images) assert.ok(await img.evaluate(node => node.complete && node.naturalWidth > 0));
+              for (const img of images) {
+                await img.evaluate(node => node.decode());
+                assert.ok(await img.evaluate(node => node.complete && node.naturalWidth > 0));
+              }
               assert.ok((await figure.locator('figcaption').textContent()).trim());
             }
             for (const img of await page.locator('img:visible').all()) {

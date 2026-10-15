@@ -166,8 +166,17 @@ body.home::before { display: var(--texture-overlay); }
 }
 :root[data-theme="dark"] .pubmint-art .pubmint-shot-light { display: none; }
 :root[data-theme="dark"] .pubmint-art .pubmint-shot-dark { display: block; }
-.stresslab-art { flex-direction: column; align-items: stretch; gap: 11px; padding: 30px; }
-.stresslab-art span { display: block; width: 100%; padding: 8px 0; border-top: 2px solid var(--lime); color: var(--paper); font-size: 30px; font-weight: 800; letter-spacing: 0; line-height: 1.1; }
+.card-art.stresslab-art {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 0;
+  padding: 18px 30px;
+}
+.stresslab-art > div { display: grid; grid-template-columns: 42px minmax(0, 1fr); align-items: center; gap: 12px; border-top: 2px solid var(--lime); }
+.stresslab-art > div:first-child { border-top: 0; }
+.stresslab-art small { color: var(--lime); font-size: 14px; font-weight: 800; }
+.stresslab-art strong { color: var(--paper); font-size: 29px; font-weight: 800; line-height: 1.1; }
 .home .detail-link { display: block; width: fit-content; margin-top: 17px; color: var(--paper); font-size: 15px; font-weight: 700; text-underline-offset: 4px; }
 .home .detail-link:hover { color: var(--lime); }
 #rug-pulled {
@@ -252,8 +261,8 @@ body.home::before { display: var(--texture-overlay); }
   .home-card { grid-template-columns: 1fr; gap: 18px; min-height: 0; padding: 24px; }
   .home-card h3 { margin-bottom: 14px; font-size: 32px; }
   .home-card p { margin-bottom: 13px; font-size: 16px; line-height: 1.5; }
-  .stresslab-art { gap: 6px; padding: 18px; }
-  .stresslab-art span { font-size: 22px; }
+  .card-art.stresslab-art { padding: 10px 18px; }
+  .stresslab-art strong { font-size: 22px; }
   .product-mark { width: 58px; height: 58px; margin-bottom: 15px; }
   .card-art { grid-row: auto; min-height: 0; height: auto; }
   #rug-pulled { grid-template-areas: "copy" "art" "actions"; grid-template-rows: auto; min-height: 0; }
