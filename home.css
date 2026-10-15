@@ -216,6 +216,7 @@ body.home::before { display: var(--texture-overlay); }
 #rug-pulled .card-art img { width: 100%; height: auto; aspect-ratio: 8/5; object-fit: contain; }
 #rug-pulled .home-card-actions { grid-area: actions; align-self: end; }
 #rug-pulled .home-card-actions .play-link { min-width: 200px; }
+#rug-pulled .home-card-actions .wishlist-actions { max-width: 100%; }
 #avoiding-jayms { --card-accent: color-mix(in srgb, var(--lime) 55%, var(--paper)); }
 #rug-pulled-live { --card-accent: color-mix(in srgb, var(--lime) 35%, var(--paper)); }
 #pubmint { --card-accent: color-mix(in srgb, var(--lime) 20%, var(--paper)); }
