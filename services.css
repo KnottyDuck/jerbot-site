@@ -162,7 +162,7 @@
 }
 @media (max-width: 520px) {
   .services-v2 .service-hero { gap: 24px; padding: 42px 0 48px; }
-  .services-v2 .service-veteran { max-width: 100%; padding: 8px 10px; font-size: 12px; letter-spacing: 0; white-space: normal; }
+  .services-v2 .service-veteran { max-width: 100%; padding: 8px 10px; font-size: 12px; letter-spacing: 0; white-space: nowrap; }
   .services-v2 .service-hero h1 { font-size: 37px; }
   .services-v2 .service-hero-copy > p:not(.service-veteran) { font-size: 16px; }
   .services-v2 .service-character { min-height: 230px; }
@@ -178,4 +178,7 @@
   .services-v2 .service-package-grid article { padding: 22px; }
   .services-v2 .service-package-grid h3 { font-size: 22px; }
   .services-v2 .service-next { padding-left: 18px; }
+}
+@media (max-width: 374px) {
+  .services-v2 .service-veteran { white-space: normal; }
 }
