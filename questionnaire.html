@@ -97,7 +97,7 @@
         <div class="questionnaire-grid">
           <label>Budget band, if known<input name="budget" type="text" maxlength="120" autocomplete="off" placeholder="A range or “not sure”"></label>
           <label>Deadline, if any<input name="deadline" type="text" maxlength="120" autocomplete="off" placeholder="A date, a season, or “flexible”"></label>
-          <div class="full"><p class="questionnaire-label">Does the project involve any of these?</p><div class="questionnaire-checks"><label><input type="checkbox" name="compliance" value="payments"> Payments</label><label><input type="checkbox" name="compliance" value="health"> Health information</label><label><input type="checkbox" name="compliance" value="minors"> Minors</label></div></div>
+          <div class="full"><p class="questionnaire-label" id="questionnaire-compliance-label">Does the project involve any of these?</p><div class="questionnaire-checks" role="group" aria-labelledby="questionnaire-compliance-label"><label><input type="checkbox" name="compliance" value="payments"> Payments</label><label><input type="checkbox" name="compliance" value="health"> Health information</label><label><input type="checkbox" name="compliance" value="minors"> Minors</label></div></div>
           <label class="full">Other constraints or context<textarea name="otherConstraints" maxlength="300"></textarea></label>
         </div>
       </fieldset>
