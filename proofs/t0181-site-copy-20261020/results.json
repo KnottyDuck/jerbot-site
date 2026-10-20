@@ -1,0 +1,82 @@
+[
+  {
+    "browser": "chrome",
+    "page": "about",
+    "theme": "light",
+    "viewport": "390x844",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-about-light-390.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  },
+  {
+    "browser": "chrome",
+    "page": "about",
+    "theme": "light",
+    "viewport": "1440x900",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-about-light-1440.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  },
+  {
+    "browser": "chrome",
+    "page": "about",
+    "theme": "dark",
+    "viewport": "390x844",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-about-dark-390.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  },
+  {
+    "browser": "chrome",
+    "page": "about",
+    "theme": "dark",
+    "viewport": "1440x900",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-about-dark-1440.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  },
+  {
+    "browser": "chrome",
+    "page": "rug-pulled",
+    "theme": "light",
+    "viewport": "390x844",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-rug-pulled-light-390.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  },
+  {
+    "browser": "chrome",
+    "page": "rug-pulled",
+    "theme": "light",
+    "viewport": "1440x900",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-rug-pulled-light-1440.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  },
+  {
+    "browser": "chrome",
+    "page": "rug-pulled",
+    "theme": "dark",
+    "viewport": "390x844",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-rug-pulled-dark-390.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  },
+  {
+    "browser": "chrome",
+    "page": "rug-pulled",
+    "theme": "dark",
+    "viewport": "1440x900",
+    "screenshot": "/private/tmp/jerbot-site-t0181-20261020/proofs/t0181-site-copy-20261020/chrome-rug-pulled-dark-1440.png",
+    "overflow": 0,
+    "consoleErrors": [],
+    "csp": []
+  }
+]
