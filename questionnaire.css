@@ -1,5 +1,12 @@
 /* Questionnaire only; shared light/dark theme variables remain authoritative. */
 .questionnaire-page main { background: var(--ink); }
+:root[data-theme="dark"] .questionnaire-page { --questionnaire-field-border: #647068; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .questionnaire-page { --questionnaire-field-border: #647068; }
+}
+@media (forced-colors: active) {
+  .questionnaire-page { --questionnaire-field-border: CanvasText; }
+}
 .questionnaire-page .questionnaire-intro {
   max-width: 860px;
   padding: 72px 0 44px;
@@ -76,7 +83,7 @@
   min-width: 0;
   min-height: 46px;
   padding: 10px 12px;
-  border: 1px solid var(--line);
+  border: 1px solid var(--questionnaire-field-border, var(--line));
   border-radius: 4px;
   background: var(--ink);
   color: var(--paper);
