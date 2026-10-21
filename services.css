@@ -151,7 +151,8 @@
 .services-v2 .service-next a,
 .services-v2 .service-contact a { color: var(--lime); font-weight: 800; overflow-wrap: anywhere; }
 @media (max-width: 800px) {
-  .services-v2 .service-hero { grid-template-columns: 1fr; gap: 34px; padding: 58px 0; }
+  .services-v2 .service-hero { grid-template-columns: minmax(0, 1fr); gap: 34px; padding: 58px 0; }
+  .services-v2 .service-hero-copy { min-width: 0; }
   .services-v2 .service-hero h1 { font-size: 48px; }
   .services-v2 .service-character { min-height: 260px; order: 0; }
   .services-v2 .service-character > img:first-child { height: 240px; }
@@ -162,7 +163,8 @@
 }
 @media (max-width: 520px) {
   .services-v2 .service-hero { gap: 24px; padding: 42px 0 48px; }
-  .services-v2 .service-veteran { max-width: 100%; padding: 8px 10px; font-size: 12px; letter-spacing: 0; white-space: nowrap; }
+  .services-v2 .service-veteran { max-width: 100%; padding: 8px 10px; font-size: 12px; letter-spacing: 0; white-space: normal; }
+  .services-v2 .service-hero .button { max-width: 100%; white-space: normal; text-align: center; }
   .services-v2 .service-hero h1 { font-size: 37px; }
   .services-v2 .service-hero-copy > p:not(.service-veteran) { font-size: 16px; }
   .services-v2 .service-character { min-height: 230px; }
