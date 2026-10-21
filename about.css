@@ -13,11 +13,18 @@
   line-height: 1.04;
   letter-spacing: 0;
 }
-.about-v2 .about-hero-copy > p:last-child {
+.about-v2 .about-hero-copy > p:nth-last-child(2) {
   max-width: 60ch;
   margin: 28px 0 0;
   font-size: 18px;
   line-height: 1.65;
+}
+.about-v2 .about-hero-copy > .tagline {
+  margin: 20px 0 0;
+  color: var(--paper);
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.35;
 }
 .about-v2 .about-portrait {
   height: 330px;
@@ -144,7 +151,8 @@
 @media (max-width: 520px) {
   .about-v2 .about-hero { padding: 42px 0 50px; }
   .about-v2 .about-hero h1 { font-size: 37px; }
-  .about-v2 .about-hero-copy > p:last-child { font-size: 16px; margin-top: 22px; }
+  .about-v2 .about-hero-copy > p:nth-last-child(2) { font-size: 16px; margin-top: 22px; }
+  .about-v2 .about-hero-copy > .tagline { font-size: 19px; }
   .about-v2 .about-portrait { height: 230px; }
   .about-v2 .about-portrait > img { max-height: 215px; }
   .about-v2 .about-arc,
