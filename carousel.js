@@ -34,7 +34,11 @@ document.querySelectorAll('.site-carousel').forEach(region => {
   dots.forEach((dot, i) => dot.addEventListener('click', () => go(i)));
   region.addEventListener('mouseenter', () => { hovered = true; schedule(); });
   region.addEventListener('mouseleave', () => { hovered = false; schedule(); });
-  region.addEventListener('focusin', schedule);
+  region.addEventListener('focusin', event => {
+    schedule();
+    const slide = event.target.closest('.screen-track figure');
+    if (slide && track.contains(slide)) requestAnimationFrame(() => go(slides.indexOf(slide)));
+  });
   region.addEventListener('focusout', () => setTimeout(schedule, 0));
   track.addEventListener('keydown', event => {
     if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
