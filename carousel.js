@@ -37,7 +37,11 @@ document.querySelectorAll('.site-carousel').forEach(region => {
   region.addEventListener('focusin', event => {
     schedule();
     const slide = event.target.closest('.screen-track figure');
-    if (slide && track.contains(slide)) requestAnimationFrame(() => go(slides.indexOf(slide)));
+    if (slide && track.contains(slide)) requestAnimationFrame(() => {
+      index = slides.indexOf(slide);
+      dots.forEach((dot, i) => dot.setAttribute('aria-current', String(i === index)));
+      slide.scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: motion.matches ? 'instant' : 'smooth' });
+    });
   });
   region.addEventListener('focusout', () => setTimeout(schedule, 0));
   track.addEventListener('keydown', event => {
