@@ -1,4 +1,8 @@
 /* Strategy Stress Lab product shell. No imagery or shared-style changes. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .stresslab-page .theme-picker select { border-color: #829589; }
+}
+:root[data-theme="dark"] .stresslab-page .theme-picker select { border-color: #829589; }
 .stresslab-page main {
   background: var(--ink);
 }
