@@ -40,3 +40,13 @@ test('robots allows public routes and advertises the sitemap', async () => {
   assert.match(robots, /^Sitemap: https:\/\/jerbot\.dev\/sitemap\.xml$/m);
   assert.doesNotMatch(robots, /^Disallow:/m);
 });
+
+test('services, about, and questionnaire share their page descriptions as OG copy', async () => {
+  for (const file of ['services.html', 'about.html', 'questionnaire.html']) {
+    const html = await read(file);
+    const pageDescription = html.match(/<meta\s+name="description"\s+content="([^"]+)"/i)?.[1];
+    const ogDescription = html.match(/<meta\s+property="og:description"\s+content="([^"]+)"/i)?.[1];
+    assert.ok(pageDescription, `${file} page description`);
+    assert.equal(ogDescription, pageDescription, `${file} OG description`);
+  }
+});
